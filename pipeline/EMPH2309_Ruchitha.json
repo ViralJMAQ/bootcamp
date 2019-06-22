@@ -73,7 +73,8 @@
 						"sqlReaderStoredProcedureName": "[EMPH2309].[Top5Matches]"
 					},
 					"sink": {
-						"type": "AzureSqlSink"
+						"type": "AzureSqlSink",
+						"sqlWriterStoredProcedureName": "[EMPH2309].[Top5Matches]"
 					},
 					"enableStaging": false
 				},
