@@ -24,8 +24,7 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink",
-						"sqlWriterStoredProcedureName": "[EMPH2279].[usp_ALL_MATCHES]"
+						"type": "AzureSqlSink"
 					},
 					"enableStaging": false,
 					"translator": {
