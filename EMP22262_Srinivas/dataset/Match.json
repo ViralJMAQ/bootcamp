@@ -1,10 +1,6 @@
 {
 	"name": "Match",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "EMPH2213_Blob",
-			"type": "LinkedServiceReference"
-		},
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
