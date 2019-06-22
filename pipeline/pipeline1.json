@@ -183,11 +183,11 @@
 							{
 								"source": {
 									"name": "Win_Margin",
-									"type": "Int32"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Win_Margin",
-									"type": "Int32"
+									"type": "String"
 								}
 							},
 							{
@@ -197,7 +197,7 @@
 								},
 								"sink": {
 									"name": "Country_id",
-									"type": "Int32"
+									"type": "String"
 								}
 							}
 						]
