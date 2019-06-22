@@ -82,7 +82,7 @@
 			}
 		],
 		"typeProperties": {
-			"tableName": "[EMPH2309].[Match]"
+			"tableName": "[EMPH2309].[Matches]"
 		}
 	}
 }

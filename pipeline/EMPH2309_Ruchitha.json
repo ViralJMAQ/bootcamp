@@ -24,15 +24,7 @@
 						}
 					},
 					"sink": {
-						"type": "DelimitedTextSink",
-						"storeSettings": {
-							"type": "AzureBlobStorageWriteSetting"
-						},
-						"formatSettings": {
-							"type": "DelimitedTextWriteSetting",
-							"quoteAllText": true,
-							"fileExtension": ".txt"
-						}
+						"type": "AzureSqlSink"
 					},
 					"enableStaging": false
 				},
@@ -44,14 +36,14 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "Match_EMPH2309",
+						"referenceName": "EMPH_2309AzureSqlTable2",
 						"type": "DatasetReference"
 					}
 				]
 			},
 			{
-				"name": "Copy Data2",
-				"type": "Copy",
+				"name": "Stored Procedure1",
+				"type": "SqlServerStoredProcedure",
 				"dependsOn": [
 					{
 						"activity": "Copy Data1",
@@ -67,27 +59,10 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"typeProperties": {
-					"source": {
-						"type": "AzureSqlSource"
-					},
-					"sink": {
-						"type": "AzureSqlSink"
-					},
-					"enableStaging": false
-				},
-				"inputs": [
-					{
-						"referenceName": "EMPH_2309AzureSqlTable2",
-						"type": "DatasetReference"
-					}
-				],
-				"outputs": [
-					{
-						"referenceName": "EMPH_2309AzureSqlTable2",
-						"type": "DatasetReference"
-					}
-				]
+				"linkedServiceName": {
+					"referenceName": "EMPH2309_Ruchitha_AzureSqlDatabase4",
+					"type": "LinkedServiceReference"
+				}
 			}
 		]
 	}
