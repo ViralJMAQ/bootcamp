@@ -1,0 +1,457 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory Name"
+		},
+		"AzureSqlDatabase1": {
+			"type": "string"
+		},
+		"AzureBlobStorage1": {
+			"type": "string"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/pipeline1')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Copy Data1",
+						"type": "Copy",
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"typeProperties": {
+							"source": {
+								"type": "DelimitedTextSource",
+								"storeSettings": {
+									"type": "AzureBlobStorageReadSetting",
+									"recursive": true
+								},
+								"formatSettings": {
+									"type": "DelimitedTextReadSetting"
+								}
+							},
+							"sink": {
+								"type": "AzureSqlSink"
+							},
+							"enableStaging": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"name": "Match_SK",
+											"type": "String"
+										},
+										"sink": {
+											"name": "Match_SK",
+											"type": "Int32"
+										}
+									},
+									{
+										"source": {
+											"name": "match_id",
+											"type": "String"
+										},
+										"sink": {
+											"name": "match_id",
+											"type": "Int32"
+										}
+									},
+									{
+										"source": {
+											"name": "Team1",
+											"type": "String"
+										},
+										"sink": {
+											"name": "Team1",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Team2",
+											"type": "String"
+										},
+										"sink": {
+											"name": "Team2",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "match_date",
+											"type": "String"
+										},
+										"sink": {
+											"name": "match_date",
+											"type": "DateTime"
+										}
+									},
+									{
+										"source": {
+											"name": "Season_Year",
+											"type": "String"
+										},
+										"sink": {
+											"name": "Season_Year",
+											"type": "Int32"
+										}
+									},
+									{
+										"source": {
+											"name": "Venue_Name",
+											"type": "String"
+										},
+										"sink": {
+											"name": "Venue_Name",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "City_Name",
+											"type": "String"
+										},
+										"sink": {
+											"name": "City_Name",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Country_Name",
+											"type": "String"
+										},
+										"sink": {
+											"name": "Country_Name",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Toss_Winner",
+											"type": "String"
+										},
+										"sink": {
+											"name": "Toss_Winner",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "match_winner",
+											"type": "String"
+										},
+										"sink": {
+											"name": "match_winner",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Toss_Name",
+											"type": "String"
+										},
+										"sink": {
+											"name": "Toss_Name",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Win_Type",
+											"type": "String"
+										},
+										"sink": {
+											"name": "Win_Type",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Outcome_Type",
+											"type": "String"
+										},
+										"sink": {
+											"name": "Outcome_Type",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "ManOfMach",
+											"type": "String"
+										},
+										"sink": {
+											"name": "ManOfMach",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Win_Margin",
+											"type": "String"
+										},
+										"sink": {
+											"name": "Win_Margin",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Country_id",
+											"type": "String"
+										},
+										"sink": {
+											"name": "Country_id",
+											"type": "Int32"
+										}
+									}
+								]
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "DelimitedText1",
+								"type": "DatasetReference"
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "AzureSqlTable1",
+								"type": "DatasetReference"
+							}
+						]
+					},
+					{
+						"name": "Stored Procedure1",
+						"type": "SqlServerStoredProcedure",
+						"dependsOn": [
+							{
+								"activity": "Copy Data1",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"typeProperties": {
+							"storedProcedureName": "[[EMP2291].[usp_TOP5MATCHES]"
+						},
+						"linkedServiceName": {
+							"referenceName": "[parameters('AzureSqlDatabase1')]",
+							"type": "LinkedServiceReference"
+						}
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/DelimitedText1')]",
+				"[concat(variables('factoryId'), '/datasets/AzureSqlTable1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DelimitedText1')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "[parameters('AzureBlobStorage1')]",
+					"type": "LinkedServiceReference"
+				},
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "Match.csv",
+						"container": "source"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "Match_SK",
+						"type": "String"
+					},
+					{
+						"name": "match_id",
+						"type": "String"
+					},
+					{
+						"name": "Team1",
+						"type": "String"
+					},
+					{
+						"name": "Team2",
+						"type": "String"
+					},
+					{
+						"name": "match_date",
+						"type": "String"
+					},
+					{
+						"name": "Season_Year",
+						"type": "String"
+					},
+					{
+						"name": "Venue_Name",
+						"type": "String"
+					},
+					{
+						"name": "City_Name",
+						"type": "String"
+					},
+					{
+						"name": "Country_Name",
+						"type": "String"
+					},
+					{
+						"name": "Toss_Winner",
+						"type": "String"
+					},
+					{
+						"name": "match_winner",
+						"type": "String"
+					},
+					{
+						"name": "Toss_Name",
+						"type": "String"
+					},
+					{
+						"name": "Win_Type",
+						"type": "String"
+					},
+					{
+						"name": "Outcome_Type",
+						"type": "String"
+					},
+					{
+						"name": "ManOfMach",
+						"type": "String"
+					},
+					{
+						"name": "Win_Margin",
+						"type": "String"
+					},
+					{
+						"name": "Country_id",
+						"type": "String"
+					}
+				]
+			}
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureSqlTable1')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "[parameters('AzureSqlDatabase1')]",
+					"type": "LinkedServiceReference"
+				},
+				"type": "AzureSqlTable",
+				"schema": [
+					{
+						"name": "Match_SK",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "match_id",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "Team1",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Team2",
+						"type": "nvarchar"
+					},
+					{
+						"name": "match_date",
+						"type": "datetime2",
+						"scale": 7
+					},
+					{
+						"name": "Season_Year",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "Venue_Name",
+						"type": "nvarchar"
+					},
+					{
+						"name": "City_Name",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Country_Name",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Toss_Winner",
+						"type": "nvarchar"
+					},
+					{
+						"name": "match_winner",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Toss_Name",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Win_Type",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Outcome_Type",
+						"type": "nvarchar"
+					},
+					{
+						"name": "ManOfMach",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Win_Margin",
+						"type": "nvarchar"
+					},
+					{
+						"name": "Country_id",
+						"type": "int",
+						"precision": 10
+					}
+				],
+				"typeProperties": {
+					"tableName": "[[EMP2291].[EMP2291_Match]"
+				}
+			}
+		}
+	]
+}
