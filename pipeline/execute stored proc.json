@@ -1,0 +1,66 @@
+{
+	"name": "execute stored proc",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy Data",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSetting",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSetting"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"sqlWriterStoredProcedureName": "[EMP2291].[usp_TOP5MATCHES]",
+						"sqlWriterTableType": "Temp"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "Match",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSqlTablebootcamp",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Stored Procedure1",
+				"type": "SqlServerStoredProcedure",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"storedProcedureName": "[EMP2291].[usp_TOP5MATCHES]"
+				},
+				"linkedServiceName": {
+					"referenceName": "bootcamp",
+					"type": "LinkedServiceReference"
+				}
+			}
+		]
+	}
+}
