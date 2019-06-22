@@ -182,7 +182,7 @@
 							},
 							{
 								"source": {
-									"type": "String",
+									"type": "Int32",
 									"ordinal": 16
 								},
 								"sink": {
@@ -192,7 +192,7 @@
 							},
 							{
 								"source": {
-									"type": "String",
+									"type": "Int32",
 									"ordinal": 17
 								},
 								"sink": {
