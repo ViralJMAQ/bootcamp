@@ -2,7 +2,7 @@
 	"name": "EMPH2354_Match",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureSqlDatabase1",
+			"referenceName": "EMPH2354_AzureSqlDatabase",
 			"type": "LinkedServiceReference"
 		},
 		"type": "AzureSqlTable",
