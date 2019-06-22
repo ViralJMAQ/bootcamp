@@ -2,7 +2,7 @@
 	"name": "Match",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "EMPH2258Milind_AzureBlob",
+			"referenceName": "EMPH2264_BLOB",
 			"type": "LinkedServiceReference"
 		},
 		"type": "DelimitedText",
@@ -15,79 +15,77 @@
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
-			"nullValue": "NULL",
 			"quoteChar": "\""
 		},
 		"schema": [
 			{
-				"name": "Prop_0",
+				"name": "Match_SK",
 				"type": "String"
 			},
 			{
-				"name": "Prop_1",
+				"name": "match_id",
 				"type": "String"
 			},
 			{
-				"name": "Prop_2",
+				"name": "Team1",
 				"type": "String"
 			},
 			{
-				"name": "Prop_3",
+				"name": "Team2",
 				"type": "String"
 			},
 			{
-				"name": "Prop_4",
+				"name": "match_date",
 				"type": "String"
 			},
 			{
-				"name": "Prop_5",
+				"name": "Season_Year",
 				"type": "String"
 			},
 			{
-				"name": "Prop_6",
+				"name": "Venue_Name",
 				"type": "String"
 			},
 			{
-				"name": "Prop_7",
+				"name": "City_Name",
 				"type": "String"
 			},
 			{
-				"name": "Prop_8",
+				"name": "Country_Name",
 				"type": "String"
 			},
 			{
-				"name": "Prop_9",
+				"name": "Toss_Winner",
 				"type": "String"
 			},
 			{
-				"name": "Prop_10",
+				"name": "match_winner",
 				"type": "String"
 			},
 			{
-				"name": "Prop_11",
+				"name": "Toss_Name",
 				"type": "String"
 			},
 			{
-				"name": "Prop_12",
+				"name": "Win_Type",
 				"type": "String"
 			},
 			{
-				"name": "Prop_13",
+				"name": "Outcome_Type",
 				"type": "String"
 			},
 			{
-				"name": "Prop_14",
+				"name": "ManOfMach",
 				"type": "String"
 			},
 			{
-				"name": "Prop_15",
+				"name": "Win_Margin",
 				"type": "String"
 			},
 			{
-				"name": "Prop_16",
+				"name": "Country_id",
 				"type": "String"
 			}
 		]
-	},
-	"type": "Microsoft.DataFactory/factories/datasets"
+	}
 }
