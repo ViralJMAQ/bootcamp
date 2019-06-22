@@ -17,14 +17,17 @@
 						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSetting",
-							"recursive": true
+							"recursive": false,
+							"wildcardFileName": "Match.csv",
+							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
 							"type": "DelimitedTextReadSetting"
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink"
+						"type": "AzureSqlSink",
+						"preCopyScript": "DROP TABLE IF EXISTS [EMPH2284].[Match];\nCREATE TABLE [EMPH2284].[Match](\n\tMatch_SK    VARCHAR(255)    \n,match_id    VARCHAR(255)    \n,Team1        VARCHAR(255)    \n,Team2        VARCHAR(255)    \n,match_date    VARCHAR(255)    \n,Season_Year    VARCHAR(255)    \n,Venue_Name    VARCHAR(255)    \n,City_Name    VARCHAR(255)    \n,Country_Name    VARCHAR(255)    \n,Toss_Winner    VARCHAR(255)    \n,match_winner    VARCHAR(255)    \n,Toss_Name    VARCHAR(255)    \n,Win_Type    VARCHAR(255)    \n,Outcome_Type    VARCHAR(255)    \n,ManOfMach    VARCHAR(255)    \n,Win_Margin    VARCHAR(255)    \n,Country_id    VARCHAR(255)\n) \n"
 					},
 					"enableStaging": false,
 					"translator": {
