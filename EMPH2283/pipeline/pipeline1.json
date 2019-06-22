@@ -35,21 +35,21 @@
 							{
 								"source": {
 									"name": "Match_SK",
-									"type": "Int16"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Match_SK",
-									"type": "Int16"
+									"type": "String"
 								}
 							},
 							{
 								"source": {
 									"name": "match_id",
-									"type": "Int32"
+									"type": "String"
 								},
 								"sink": {
 									"name": "match_id",
-									"type": "Int32"
+									"type": "String"
 								}
 							},
 							{
@@ -75,7 +75,7 @@
 							{
 								"source": {
 									"name": "match_date",
-									"type": "DateTime"
+									"type": "String"
 								},
 								"sink": {
 									"name": "match_date",
@@ -85,11 +85,11 @@
 							{
 								"source": {
 									"name": "Season_Year",
-									"type": "Int16"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Season_Year",
-									"type": "Int16"
+									"type": "String"
 								}
 							},
 							{
@@ -185,21 +185,21 @@
 							{
 								"source": {
 									"name": "Win_Margin",
-									"type": "Int32"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Win_Margin",
-									"type": "Byte"
+									"type": "String"
 								}
 							},
 							{
 								"source": {
 									"name": "Country_id",
-									"type": "Int32"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Country_id",
-									"type": "Byte"
+									"type": "String"
 								}
 							}
 						]
