@@ -69,12 +69,10 @@
 				},
 				"typeProperties": {
 					"source": {
-						"type": "AzureSqlSource",
-						"sqlReaderStoredProcedureName": "[EMPH2309].[Top5Matches]"
+						"type": "AzureSqlSource"
 					},
 					"sink": {
-						"type": "AzureSqlSink",
-						"sqlWriterStoredProcedureName": "[EMPH2309].[Top5Matches]"
+						"type": "AzureSqlSink"
 					},
 					"enableStaging": false
 				},
