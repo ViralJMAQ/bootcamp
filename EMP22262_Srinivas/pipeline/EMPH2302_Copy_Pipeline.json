@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy Data1",
+				"name": "Copy",
 				"type": "Copy",
 				"policy": {
 					"timeout": "7.00:00:00",
@@ -23,9 +23,6 @@
 							"type": "DelimitedTextReadSetting"
 						}
 					},
-					"sink": {
-						"type": "AzureSqlSink"
-					},
 					"enableStaging": false
 				}
 			},
@@ -34,7 +31,7 @@
 				"type": "SqlServerStoredProcedure",
 				"dependsOn": [
 					{
-						"activity": "Copy Data1",
+						"activity": "Copy",
 						"dependencyConditions": [
 							"Succeeded"
 						]
