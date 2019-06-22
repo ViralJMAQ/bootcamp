@@ -2,7 +2,7 @@
 	"name": "Match",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureBlobStorage1",
+			"referenceName": "EMPH2354_AzureBlobStorage",
 			"type": "LinkedServiceReference"
 		},
 		"type": "DelimitedText",
