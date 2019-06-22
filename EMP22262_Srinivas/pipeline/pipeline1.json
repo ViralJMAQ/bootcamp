@@ -27,7 +27,7 @@
 					},
 					"sink": {
 						"type": "AzureSqlSink",
-						"preCopyScript": "DROP TABLE IF EXISTS [EMPH2335].[Match]\nCREATE TABLE [EMPH2335].[Match](\nMatch_SK varchar(128) NULL,\nmatch_id varchar(128) NULL,\nTeam1 varchar(128) NULL,\nTeam2 varchar(128) NULL,\nmatch_date varchar(128) NULL,\nSeason_Year varchar(128) NULL,\nVenue_Name varchar(128) NULL,\nCity_Name varchar(128) NULL,\nCountry_Name varchar(128) NULL,\nToss_Winner varchar(128) NULL,\nmatch_winner varchar(128) NULL,\nToss_Name varchar(128) NULL,\nWin_Type varchar(128) NULL,\nOutcome_Type varchar(128) NULL,\nManOfMach varchar(128) NULL,\nWin_Margin varchar(128) NULL,\nCountry_id varchar(128) NULL\n)\n\n"
+						"preCopyScript": "DROP TABLE IF EXISTS [EMPH2335].[Match]\nCREATE TABLE [EMPH2335].[Match](\nMatch_SK varchar(128) NULL,\nmatch_id varchar(128) NULL,\nTeam1 varchar(128) NULL,\nTeam2 varchar(128) NULL,\nmatch_date varchar(128) NULL,\nSeason_Year varchar(128) NULL,\nVenue_Name varchar(128) NULL,\nCity_Name varchar(128) NULL,\nCountry_Name varchar(128) NULL,\nToss_Winner varchar(128) NULL,\nmatch_winner varchar(128) NULL,\nToss_Name varchar(128) NULL,\nWin_Type varchar(128) NULL,\nOutcome_Type varchar(128) NULL,\nManOfMach varchar(128) NULL,\nWin_Margin INT NULL,\nCountry_id varchar(128) NULL\n)\n\n"
 					},
 					"enableStaging": false,
 					"enableSkipIncompatibleRow": true,
@@ -186,7 +186,7 @@
 							},
 							{
 								"source": {
-									"type": "String",
+									"type": "Int32",
 									"ordinal": 16
 								},
 								"sink": {
