@@ -77,7 +77,7 @@
 								},
 								"sink": {
 									"name": "match_date",
-									"type": "DateTime"
+									"type": "String"
 								}
 							},
 							{
