@@ -25,7 +25,9 @@
 					},
 					"sink": {
 						"type": "AzureSqlSink",
-						"sqlWriterStoredProcedureName": "[EMPH2283].[sp_top5]"
+						"sqlWriterStoredProcedureName": "[EMPH2283].[sp_top5]",
+						"sqlWriterTableType": "sink",
+						"storedProcedureTableTypeParameterName": "sink"
 					},
 					"enableStaging": false
 				},
