@@ -36,7 +36,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "AzureSqlTable_2217",
+						"referenceName": "AzureSqlTable_2298",
 						"type": "DatasetReference"
 					}
 				]
