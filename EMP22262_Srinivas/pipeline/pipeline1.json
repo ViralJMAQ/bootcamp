@@ -17,16 +17,20 @@
 						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSetting",
-							"recursive": true
+							"recursive": false,
+							"wildcardFileName": "Match.csv",
+							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
 							"type": "DelimitedTextReadSetting"
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink"
+						"type": "AzureSqlSink",
+						"preCopyScript": "drop table [EMPH2279].[EMPH2279_Matches];\nCREATE TABLE [EMPH2279].[EMPH2279_Matches](\n    [Match_SK] [varchar](50)  NULL,\n    [match_id] [varchar](50)  NULL,\n    [Team1] [varchar](50)  NULL,\n    [Team2] [varchar](50)  NULL,\n    [match_date] [varchar](50)  NULL,\n    [Season_Year] [varchar] (50) NULL,\n    [Venue_Name] [varchar](100)  NULL,\n    [City_Name] [varchar](50)  NULL,\n    [Country_Name] [varchar](50)  NULL,\n    [Toss_Winner] [varchar](50) NULL,\n    [match_winner] [varchar](50)  NULL,\n    [Toss_Name] [varchar](50)  NULL,\n    [Win_Type] [varchar](50) NULL,\n    [Outcome_Type] [varchar](50)  NULL,\n    [ManOfMach] [varchar](50)  NULL,\n    [Win_Margin] [varchar](50)  NULL,\n    [Country_id] [varchar](50)  NULL\n) "
 					},
 					"enableStaging": false,
+					"enableSkipIncompatibleRow": true,
 					"translator": {
 						"type": "TabularTranslator",
 						"mappings": [
