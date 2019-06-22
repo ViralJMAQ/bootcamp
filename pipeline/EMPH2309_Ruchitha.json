@@ -59,6 +59,9 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
+				"typeProperties": {
+					"storedProcedureName": "[EMPH2309].[Top5Matches]"
+				},
 				"linkedServiceName": {
 					"referenceName": "EMPH2309_Ruchitha_AzureSqlDatabase4",
 					"type": "LinkedServiceReference"
