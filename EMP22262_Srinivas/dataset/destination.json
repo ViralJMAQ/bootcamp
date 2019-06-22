@@ -1,0 +1,84 @@
+{
+	"name": "destination",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EMPH2318_krupakoshti",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "match_sk",
+				"type": "varchar"
+			},
+			{
+				"name": "match_id",
+				"type": "varchar"
+			},
+			{
+				"name": "team1",
+				"type": "varchar"
+			},
+			{
+				"name": "team2",
+				"type": "varchar"
+			},
+			{
+				"name": "match_date",
+				"type": "varchar"
+			},
+			{
+				"name": "season_year",
+				"type": "varchar"
+			},
+			{
+				"name": "venue_name",
+				"type": "varchar"
+			},
+			{
+				"name": "city_name",
+				"type": "varchar"
+			},
+			{
+				"name": "country_name",
+				"type": "varchar"
+			},
+			{
+				"name": "toss_winner",
+				"type": "varchar"
+			},
+			{
+				"name": "match_winner",
+				"type": "varchar"
+			},
+			{
+				"name": "toss_name",
+				"type": "varchar"
+			},
+			{
+				"name": "win_type",
+				"type": "varchar"
+			},
+			{
+				"name": "outcome_type",
+				"type": "varchar"
+			},
+			{
+				"name": "manofmatch",
+				"type": "varchar"
+			},
+			{
+				"name": "win_margin",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "country_id",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[EMPH2318].[Match]"
+		}
+	}
+}
