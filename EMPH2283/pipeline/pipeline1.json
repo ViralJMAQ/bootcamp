@@ -24,10 +24,184 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink",
-						"sqlWriterStoredProcedureName": "[EMP01139].[usp_Top5Matches]"
+						"type": "AzureSqlSink"
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 1
+								},
+								"sink": {
+									"name": "Match_SK",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 2
+								},
+								"sink": {
+									"name": "match_id",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 3
+								},
+								"sink": {
+									"name": "Team1",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 4
+								},
+								"sink": {
+									"name": "Team2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 5
+								},
+								"sink": {
+									"name": "match_date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 6
+								},
+								"sink": {
+									"name": "Season_Year",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 7
+								},
+								"sink": {
+									"name": "Venue_Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 8
+								},
+								"sink": {
+									"name": "City_Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 9
+								},
+								"sink": {
+									"name": "Country_Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 10
+								},
+								"sink": {
+									"name": "Toss_Winner",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 11
+								},
+								"sink": {
+									"name": "match_winner",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 12
+								},
+								"sink": {
+									"name": "Toss_Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 13
+								},
+								"sink": {
+									"name": "Win_Type",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 14
+								},
+								"sink": {
+									"name": "Outcome_Type",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 15
+								},
+								"sink": {
+									"name": "ManOfMach",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 16
+								},
+								"sink": {
+									"name": "Win_Margin",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 17
+								},
+								"sink": {
+									"name": "Country_id",
+									"type": "Int32"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
@@ -41,6 +215,32 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Stored Procedure1",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "Copy Data1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"storedProcedureName": "[EMP01139].[usp_Top5Matches]"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureSqlDatabase1",
+					"type": "LinkedServiceReference"
+				}
 			}
 		]
 	}
