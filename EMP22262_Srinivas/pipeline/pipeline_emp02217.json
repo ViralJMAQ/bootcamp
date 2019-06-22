@@ -24,19 +24,20 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink"
+						"type": "AzureSqlSink",
+						"sqlWriterStoredProcedureName": "[EMP22262].[Populate_Top5Matches]"
 					},
 					"enableStaging": false
 				},
 				"inputs": [
 					{
-						"referenceName": "Match_emp02217",
+						"referenceName": "Match_EMP22262",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "AzureSqlTable_2217",
+						"referenceName": "AzureSqlTableEMP22262",
 						"type": "DatasetReference"
 					}
 				]
