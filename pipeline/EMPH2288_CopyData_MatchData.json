@@ -1,0 +1,252 @@
+{
+	"name": "EMPH2288_CopyData_MatchData",
+	"properties": {
+		"activities": [
+			{
+				"name": "CopyMatchData",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSetting",
+							"recursive": false,
+							"wildcardFileName": "Match.csv",
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSetting"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"preCopyScript": "DROP TABLE IF EXISTS [EMPH2288].[Match]\nCREATE TABLE [EMPH2288].[Match](\n\t[Match_SK] [varchar](50) NULL,\n\t[match_id] [varchar](50) NULL,\n\t[Team1] [varchar](50) NULL,\n\t[Team2] [varchar](50) NULL,\n\t[match_date] [varchar](50) NULL,\n\t[Season_Year] [varchar](50) NULL,\n\t[Venue_Name] [varchar](50) NULL,\n\t[City_Name] [varchar](50) NULL,\n\t[Country_Name] [varchar](50) NULL,\n\t[Toss_Winner] [varchar](50) NULL,\n\t[match_winner] [varchar](50) NULL,\n\t[Toss_Name] [varchar](50) NULL,\n\t[Win_Type] [varchar](50) NULL,\n\t[Outcome_Type] [varchar](50) NULL,\n\t[ManOfMach] [varchar](50) NULL,\n\t[Win_Margin] [varchar](50) NULL,\n\t[Country_id] [varchar](50) NULL\n) ON [PRIMARY]\n"
+					},
+					"enableStaging": false,
+					"enableSkipIncompatibleRow": true,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Match_SK",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Match_SK",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "match_id",
+									"type": "String"
+								},
+								"sink": {
+									"name": "match_id",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Team1",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Team1",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Team2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Team2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "match_date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "match_date",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Season_Year",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Season_Year",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Venue_Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Venue_Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "City_Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "City_Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Country_Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Country_Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Toss_Winner",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Toss_Winner",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "match_winner",
+									"type": "String"
+								},
+								"sink": {
+									"name": "match_winner",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Toss_Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Toss_Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Win_Type",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Win_Type",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Outcome_Type",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Outcome_Type",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ManOfMach",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ManOfMach",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Win_Margin",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Win_Margin",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Country_id",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Country_id",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "Source_MatchData",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Destination_MatchData",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "GetTop5Matches",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "CopyMatchData",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"storedProcedureName": "[EMPH2288].[getTop5Matches]"
+				},
+				"linkedServiceName": {
+					"referenceName": "ADW_Bootcamp",
+					"type": "LinkedServiceReference"
+				}
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

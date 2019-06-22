@@ -1,0 +1,12 @@
+{
+	"name": "AzureSqlDatabase_EMPH2303_Prabhat",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "Azure SQL Database for bootcamp assignment",
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=maqbootcamp.database.windows.net;initial catalog=ExtendedBootcamp;user id=sqladmin",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkJPT1RDQU1QX2RlNDEwNzNmLTIyZjktNDNkYy05MWIwLTNmOTZlMWY5YTQzMyINCn0="
+		}
+	}
+}

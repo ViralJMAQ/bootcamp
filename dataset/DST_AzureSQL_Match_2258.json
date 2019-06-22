@@ -1,0 +1,90 @@
+{
+	"name": "DST_AzureSQL_Match_2258",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EMPH2258Milind",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Match_SK",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "match_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Team1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Team2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "match_date",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "Season_Year",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Venue_Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "City_Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Country_Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Toss_Winner",
+				"type": "nvarchar"
+			},
+			{
+				"name": "match_winner",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Toss_Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Win_Type",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Outcome_Type",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ManOfMach",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Win_Margin",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Country_id",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"tableName": "[EMPH2258].[Match]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
