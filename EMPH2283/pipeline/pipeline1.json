@@ -24,16 +24,13 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink",
-						"sqlWriterStoredProcedureName": "[EMPH2283].[sp_top5]",
-						"sqlWriterTableType": "sink",
-						"storedProcedureTableTypeParameterName": "sink"
+						"type": "AzureSqlSink"
 					},
 					"enableStaging": false
 				},
 				"inputs": [
 					{
-						"referenceName": "Match",
+						"referenceName": "DelimitedText1",
 						"type": "DatasetReference"
 					}
 				],
