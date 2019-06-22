@@ -27,7 +27,7 @@
 					},
 					"sink": {
 						"type": "AzureSqlSink",
-						"preCopyScript": "DROP TABLE [EMPH2332].[EMP2332_Match]\n\nCREATE  TABLE  [EMPH2332].[EMP2332_Match](\n    [Match_SK] [int] NOT NULL,\n    [match_id] [int] NOT NULL,\n    [Team1] [nvarchar](50) NOT NULL,\n    [Team2] [nvarchar](50) NOT NULL,\n    [match_date] [datetime2](7) NOT NULL,\n    [Season_Year] [int] NOT NULL,\n    [Venue_Name] [nvarchar](100) ,\n    [City_Name] [nvarchar](50) ,\n    [Country_Name] [nvarchar](50),\n    [Toss_Winner] [nvarchar](50) NULL,\n    [match_winner] [nvarchar](50) ,\n    [Toss_Name] [nvarchar](50) ,\n    [Win_Type] [nvarchar](50) NULL,\n    [Outcome_Type] [nvarchar](50) ,\n    [ManOfMach] [nvarchar](50) ,\n    [Win_Margin] [int],\n    [Country_id] [int] \n) ON [PRIMARY]\nGO"
+						"preCopyScript": "DROP TABLE [EMPH2332].[EMP2332_Match]\n\nCREATE  TABLE  [EMPH2332].[EMP2332_Match](\n    [Match_SK] [int] NOT NULL,\n    [match_id] [int] NOT NULL,\n    [Team1] [nvarchar](50) NOT NULL,\n    [Team2] [nvarchar](50) NOT NULL,\n    [match_date] [datetime2](7) NOT NULL,\n    [Season_Year] [int] NOT NULL,\n    [Venue_Name] [nvarchar](100) ,\n    [City_Name] [nvarchar](50) ,\n    [Country_Name] [nvarchar](50),\n    [Toss_Winner] [nvarchar](50) NULL,\n    [match_winner] [nvarchar](50) ,\n    [Toss_Name] [nvarchar](50) ,\n    [Win_Type] [nvarchar](50) NULL,\n    [Outcome_Type] [nvarchar](50) ,\n    [ManOfMach] [nvarchar](50) ,\n    [Win_Margin] [int],\n    [Country_id] [int] \n) "
 					},
 					"enableStaging": false,
 					"enableSkipIncompatibleRow": true,
