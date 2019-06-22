@@ -24,7 +24,8 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink"
+						"type": "AzureSqlSink",
+						"preCopyScript": "DROP TABLE IF EXISTS [EMPH2338].[Match]\n \nCREATE TABLE [EMPH2338].[Match](\nMatch_SK nvarchar(128),\nmatch_id nvarchar(128),\nTeam1 nvarchar(128),\nTeam2 nvarchar(128),\nmatch_date nvarchar(128),\nSeason_Year nvarchar(128),\nVenue_Name nvarchar(128),\nCity_Name nvarchar(128),\nCountry_Name nvarchar(128),\nToss_Winner nvarchar(128),\nmatch_winner nvarchar(128),\nToss_Name nvarchar(128),\nWin_Type nvarchar(128),\nOutcome_Type nvarchar(128),\nManOfMach nvarchar(128),\nWin_Margin nvarchar(128),\nCountry_id nvarchar(128)\n)"
 					},
 					"enableStaging": false,
 					"translator": {
