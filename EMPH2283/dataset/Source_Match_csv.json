@@ -9,6 +9,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "Match.csv",
 				"container": "source"
 			},
 			"columnDelimiter": ",",
