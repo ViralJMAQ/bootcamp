@@ -1,0 +1,88 @@
+{
+	"name": "AzureSqlTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Match_Sk",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "match_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Team1",
+				"type": "varchar"
+			},
+			{
+				"name": "Team2",
+				"type": "varchar"
+			},
+			{
+				"name": "match_date",
+				"type": "date"
+			},
+			{
+				"name": "Season_Year",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "venue_name",
+				"type": "varchar"
+			},
+			{
+				"name": "city_name",
+				"type": "varchar"
+			},
+			{
+				"name": "country_name",
+				"type": "varchar"
+			},
+			{
+				"name": "Toss_Winner",
+				"type": "varchar"
+			},
+			{
+				"name": "match_winner",
+				"type": "varchar"
+			},
+			{
+				"name": "Toss_name",
+				"type": "varchar"
+			},
+			{
+				"name": "win_type",
+				"type": "varchar"
+			},
+			{
+				"name": "Outcome_type",
+				"type": "varchar"
+			},
+			{
+				"name": "ManOfMatch",
+				"type": "varchar"
+			},
+			{
+				"name": "Winmargin",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Country_id",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"tableName": "[EMPH2283].[Match]"
+		}
+	}
+}
