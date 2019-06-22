@@ -5,13 +5,25 @@
 		"factoryName": {
 			"value": "bootcamp"
 		},
+		"ADW_Bootcamp_connectionString": {
+			"value": ""
+		},
 		"ADW_maqbootcamp_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage_connectionString": {
 			"value": ""
 		},
 		"AzureBlobStorage1_connectionString": {
 			"value": ""
 		},
+		"AzureBlobStorage2_connectionString": {
+			"value": ""
+		},
 		"AzureBlobStorage2_EMPH2239_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorageEMP22262_Srinivas_connectionString": {
 			"value": ""
 		},
 		"AzureBlobStoragePiyushT_connectionString": {
@@ -26,19 +38,31 @@
 		"AzureBlobStoragebootcamp_connectionString": {
 			"value": ""
 		},
+		"AzureSqlDatabase_connectionString": {
+			"value": ""
+		},
 		"AzureSqlDatabase1_connectionString": {
 			"value": ""
 		},
 		"AzureSqlDatabase2_connectionString": {
 			"value": ""
 		},
+		"AzureSqlDatabaseEMP22262_Srinivas_connectionString": {
+			"value": ""
+		},
 		"AzureSqlDatabasePiyushT_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase_2339_connectionString": {
 			"value": ""
 		},
 		"AzureSqlDatabase_EMPH02217_connectionString": {
 			"value": ""
 		},
 		"AzureSqlDatabase_EMPH22073_raghav_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase_Kriti_connectionString": {
 			"value": ""
 		},
 		"Bootcamp_BlobStorage_connectionString": {
@@ -56,6 +80,18 @@
 		"EMP01137_AzureSqlDatabase1_connectionString": {
 			"value": ""
 		},
+		"EMP01137_Blob_connectionString": {
+			"value": ""
+		},
+		"EMP01137_SQL_connectionString": {
+			"value": ""
+		},
+		"EMP01157_AzureBlobStorage_connectionString": {
+			"value": ""
+		},
+		"EMP01157_AzureSqlDatabase_connectionString": {
+			"value": ""
+		},
 		"EMP2336_AzureBlob_connectionString": {
 			"value": ""
 		},
@@ -66,6 +102,9 @@
 			"value": ""
 		},
 		"EMP2336_Azure_SQL_Database_connectionString": {
+			"value": ""
+		},
+		"EMPH2213_Blob_connectionString": {
 			"value": ""
 		},
 		"EMPH2257_Umesh_connectionString": {
@@ -113,10 +152,19 @@
 		"EMPH2337_AzureSqlDatabase_connectionString": {
 			"value": ""
 		},
+		"ExtendedBootcamp_connectionString": {
+			"value": ""
+		},
+		"MatchCsv_BlobStorage_connectionString": {
+			"value": ""
+		},
 		"SourceLinkedService_2284_connectionString": {
 			"value": ""
 		},
 		"bootcamp_connectionString": {
+			"value": ""
+		},
+		"extendedbootcampsa_connectionString": {
 			"value": ""
 		}
 	}
