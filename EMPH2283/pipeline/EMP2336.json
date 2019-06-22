@@ -24,7 +24,10 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink"
+						"type": "AzureSqlSink",
+						"sqlWriterStoredProcedureName": "[EMP2336].[usp_top5matches]",
+						"sqlWriterTableType": "SqlServer",
+						"storedProcedureTableTypeParameterName": ""
 					},
 					"enableStaging": false,
 					"translator": {
