@@ -1,0 +1,215 @@
+{
+	"name": "DelimitedText1_EMPH2239",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage2_EMPH2239",
+			"type": "LinkedServiceReference"
+		},
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Match.csv",
+				"container": "source"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "MatcH_id",
+				"type": "String"
+			},
+			{
+				"name": "Over_id",
+				"type": "String"
+			},
+			{
+				"name": "Ball_id",
+				"type": "String"
+			},
+			{
+				"name": "Innings_No",
+				"type": "String"
+			},
+			{
+				"name": "Team_Batting",
+				"type": "String"
+			},
+			{
+				"name": "Team_Bowling",
+				"type": "String"
+			},
+			{
+				"name": "Striker_Batting_Position",
+				"type": "String"
+			},
+			{
+				"name": "Extra_Type",
+				"type": "String"
+			},
+			{
+				"name": "Runs_Scored",
+				"type": "String"
+			},
+			{
+				"name": "Extra_runs",
+				"type": "String"
+			},
+			{
+				"name": "Wides",
+				"type": "String"
+			},
+			{
+				"name": "Legbyes",
+				"type": "String"
+			},
+			{
+				"name": "Byes",
+				"type": "String"
+			},
+			{
+				"name": "Noballs",
+				"type": "String"
+			},
+			{
+				"name": "Penalty",
+				"type": "String"
+			},
+			{
+				"name": "Bowler_Extras",
+				"type": "String"
+			},
+			{
+				"name": "Out_type",
+				"type": "String"
+			},
+			{
+				"name": "Caught",
+				"type": "String"
+			},
+			{
+				"name": "Bowled",
+				"type": "String"
+			},
+			{
+				"name": "Run_out",
+				"type": "String"
+			},
+			{
+				"name": "LBW",
+				"type": "String"
+			},
+			{
+				"name": "Retired_hurt",
+				"type": "String"
+			},
+			{
+				"name": "Stumped",
+				"type": "String"
+			},
+			{
+				"name": "caught_and_bowled",
+				"type": "String"
+			},
+			{
+				"name": "hit_wicket",
+				"type": "String"
+			},
+			{
+				"name": "ObstructingFeild",
+				"type": "String"
+			},
+			{
+				"name": "Bowler_Wicket",
+				"type": "String"
+			},
+			{
+				"name": "Match_Date",
+				"type": "String"
+			},
+			{
+				"name": "Season",
+				"type": "String"
+			},
+			{
+				"name": "Striker",
+				"type": "String"
+			},
+			{
+				"name": "Non_Striker",
+				"type": "String"
+			},
+			{
+				"name": "Bowler",
+				"type": "String"
+			},
+			{
+				"name": "Player_Out",
+				"type": "String"
+			},
+			{
+				"name": "Fielders",
+				"type": "String"
+			},
+			{
+				"name": "Striker_match_SK",
+				"type": "String"
+			},
+			{
+				"name": "StrikerSK",
+				"type": "String"
+			},
+			{
+				"name": "NonStriker_match_SK",
+				"type": "String"
+			},
+			{
+				"name": "NONStriker_SK",
+				"type": "String"
+			},
+			{
+				"name": "Fielder_match_SK",
+				"type": "String"
+			},
+			{
+				"name": "Fielder_SK",
+				"type": "String"
+			},
+			{
+				"name": "Bowler_match_SK",
+				"type": "String"
+			},
+			{
+				"name": "BOWLER_SK",
+				"type": "String"
+			},
+			{
+				"name": "PlayerOut_match_SK",
+				"type": "String"
+			},
+			{
+				"name": "BattingTeam_SK",
+				"type": "String"
+			},
+			{
+				"name": "BowlingTeam_SK",
+				"type": "String"
+			},
+			{
+				"name": "Keeper_Catch",
+				"type": "String"
+			},
+			{
+				"name": "Player_out_sk",
+				"type": "String"
+			},
+			{
+				"name": "MatchDateSK",
+				"type": "String"
+			}
+		]
+	}
+}
