@@ -184,7 +184,7 @@
 							{
 								"source": {
 									"name": "Win_Margin",
-									"type": "String"
+									"type": "Int32"
 								},
 								"sink": {
 									"name": "Win_Margin",
