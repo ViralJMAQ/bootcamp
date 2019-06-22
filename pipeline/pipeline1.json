@@ -211,7 +211,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "Top5Matches",
+						"referenceName": "Matches",
 						"type": "DatasetReference"
 					}
 				]

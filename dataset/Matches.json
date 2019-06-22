@@ -1,5 +1,5 @@
 {
-	"name": "Top5Matches",
+	"name": "Matches",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ExtendedBootcamp",
@@ -77,7 +77,7 @@
 			}
 		],
 		"typeProperties": {
-			"tableName": "[EMP01112].[Top5Matches]"
+			"tableName": "[EMP01112].[Match]"
 		}
 	}
 }
