@@ -1,0 +1,11 @@
+{
+	"name": "EMP2336_AzureSql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EMP2336_AzureSQL",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
