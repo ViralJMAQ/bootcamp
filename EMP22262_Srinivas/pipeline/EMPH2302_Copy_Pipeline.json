@@ -23,8 +23,23 @@
 							"type": "DelimitedTextReadSetting"
 						}
 					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
 					"enableStaging": false
-				}
+				},
+				"inputs": [
+					{
+						"referenceName": "EMPH2302_Dataset_Source",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "EMPH2302_Dataset_Destination",
+						"type": "DatasetReference"
+					}
+				]
 			},
 			{
 				"name": "Stored Procedure1",
