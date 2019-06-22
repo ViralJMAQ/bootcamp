@@ -26,8 +26,8 @@
 					"sink": {
 						"type": "AzureSqlSink",
 						"sqlWriterStoredProcedureName": "[EMP2336].[usp_top5matches]",
-						"sqlWriterTableType": "SqlServer",
-						"storedProcedureTableTypeParameterName": "EMP2336_Match"
+						"sqlWriterTableType": "EMP2336.Top5Matches",
+						"storedProcedureTableTypeParameterName": "Top5matches"
 					},
 					"enableStaging": false,
 					"translator": {
