@@ -25,7 +25,8 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink"
+						"type": "AzureSqlSink",
+						"preCopyScript": "TRUNCATE table [EMP01140].[Match]"
 					},
 					"enableStaging": false,
 					"translator": {
