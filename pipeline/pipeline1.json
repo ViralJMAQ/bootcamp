@@ -1,5 +1,5 @@
 {
-	"name": "CopyPipeline",
+	"name": "pipeline1",
 	"properties": {
 		"activities": [
 			{
@@ -25,10 +25,7 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink",
-						"sqlWriterStoredProcedureName": "[EMPH2335].[usp_get5Detail]",
-						"sqlWriterTableType": "Staging",
-						"storedProcedureTableTypeParameterName": ""
+						"type": "AzureSqlSink"
 					},
 					"enableStaging": false
 				},
@@ -44,6 +41,32 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Stored Procedure1",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "Copy Data1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"storedProcedureName": "[EMPH2335].[usp_get5Detail]"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureSqlDatabase1",
+					"type": "LinkedServiceReference"
+				}
 			}
 		]
 	}
