@@ -1,0 +1,68 @@
+{
+	"name": "pipeline_2270",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy Data1",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSetting",
+							"recursive": false,
+							"wildcardFileName": "Match.csv",
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSetting"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"preCopyScript": "Drop table if exists[EMPH2270].[Match]\nCreate table [EMPH2270].[Match]\n(\n    [Match_SK] [nvarchar] NOT NULL,\n    [match_id] [nvarchar] NOT NULL,\n    [Team1] [nvarchar](255) NOT NULL,\n    [Team2] [nvarchar](255) NOT NULL,\n    [match_date] [nvarchar] NOT NULL,\n    [Season_Year] [nvarchar] NOT NULL,\n    [Venue_Name] [nvarchar](255) NOT NULL,\n    [City_Name] [nvarchar](255) NOT NULL,\n    [Country_Name] [nvarchar](255) NOT NULL,\n    [Toss_Winner] [nvarchar](255) NULL,\n    [match_winner] [nvarchar](255) NOT NULL,\n    [Toss_Name] [nvarchar](255) NOT NULL,\n    [Win_Type] [nvarchar](255) NULL,\n    [Outcome_Type] [nvarchar](255) NOT NULL,\n    [ManOfMach] [nvarchar](255) NOT NULL,\n    [Win_Margin] [nvarchar] NULL,\n    [Country_id] [nvarchar] NOT NULL,\n)"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "DelimitedText_Kriti",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSqlTable_2270",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Stored Procedure1",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "Copy Data1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				}
+			}
+		]
+	}
+}
