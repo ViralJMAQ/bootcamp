@@ -1,0 +1,14 @@
+{
+	"name": "AzureSqlTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EMP01112_AzureSqlDatabase",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "[EMP01112].[Match]"
+		}
+	}
+}
