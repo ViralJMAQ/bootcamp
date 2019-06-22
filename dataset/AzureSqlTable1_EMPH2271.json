@@ -25,7 +25,7 @@
 			},
 			{
 				"name": "match_date",
-				"type": "date"
+				"type": "nvarchar"
 			},
 			{
 				"name": "Season_Year",
