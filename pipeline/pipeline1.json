@@ -32,22 +32,22 @@
 						"mappings": [
 							{
 								"source": {
-									"type": "Int64",
+									"type": "String",
 									"ordinal": 1
 								},
 								"sink": {
 									"name": "Match_SK",
-									"type": "Int32"
+									"type": "String"
 								}
 							},
 							{
 								"source": {
-									"type": "Int64",
+									"type": "String",
 									"ordinal": 2
 								},
 								"sink": {
 									"name": "match_id",
-									"type": "Int32"
+									"type": "String"
 								}
 							},
 							{
@@ -77,17 +77,17 @@
 								},
 								"sink": {
 									"name": "match_date",
-									"type": "String"
+									"type": "DateTime"
 								}
 							},
 							{
 								"source": {
-									"type": "Int64",
+									"type": "String",
 									"ordinal": 6
 								},
 								"sink": {
 									"name": "Season_Year",
-									"type": "Int32"
+									"type": "String"
 								}
 							},
 							{
@@ -192,12 +192,12 @@
 							},
 							{
 								"source": {
-									"type": "Int64",
+									"type": "String",
 									"ordinal": 17
 								},
 								"sink": {
 									"name": "Country_id",
-									"type": "Int32"
+									"type": "String"
 								}
 							}
 						]
