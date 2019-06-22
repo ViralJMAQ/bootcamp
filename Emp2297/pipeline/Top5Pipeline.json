@@ -1,0 +1,26 @@
+{
+	"name": "Top5Pipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "StoredProcPipeline",
+				"type": "SqlServerStoredProcedure",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"storedProcedureName": "[EMPH2258].[usp_Top5Matches]"
+				},
+				"linkedServiceName": {
+					"referenceName": "EMPH2258Milind",
+					"type": "LinkedServiceReference"
+				}
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

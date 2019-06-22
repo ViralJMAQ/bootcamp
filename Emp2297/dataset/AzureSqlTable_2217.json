@@ -1,0 +1,84 @@
+{
+	"name": "AzureSqlTable_2217",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase_EMPH02217",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Prop_0",
+				"type": "varchar"
+			},
+			{
+				"name": "Prop_1",
+				"type": "varchar"
+			},
+			{
+				"name": "Prop_2",
+				"type": "varchar"
+			},
+			{
+				"name": "Prop_3",
+				"type": "varchar"
+			},
+			{
+				"name": "Prop_4",
+				"type": "varchar"
+			},
+			{
+				"name": "Prop_5",
+				"type": "varchar"
+			},
+			{
+				"name": "Prop_6",
+				"type": "varchar"
+			},
+			{
+				"name": "Prop_7",
+				"type": "varchar"
+			},
+			{
+				"name": "Prop_8",
+				"type": "varchar"
+			},
+			{
+				"name": "Prop_9",
+				"type": "varchar"
+			},
+			{
+				"name": "Prop_10",
+				"type": "varchar"
+			},
+			{
+				"name": "Prop_11",
+				"type": "varchar"
+			},
+			{
+				"name": "Prop_12",
+				"type": "varchar"
+			},
+			{
+				"name": "Prop_13",
+				"type": "varchar"
+			},
+			{
+				"name": "Prop_14",
+				"type": "varchar"
+			},
+			{
+				"name": "Prop_15",
+				"type": "varchar"
+			},
+			{
+				"name": "Prop_16",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[EMP02217].[Match]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
