@@ -183,7 +183,7 @@
 							},
 							{
 								"source": {
-									"type": "String",
+									"type": "Int64",
 									"ordinal": 16
 								},
 								"sink": {
