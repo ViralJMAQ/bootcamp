@@ -1,0 +1,123 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "bootcamp"
+		},
+		"ADW_maqbootcamp_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage2_EMPH2239_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStoragePiyushT_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage_EMPH227_raghav_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage_emp02217_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStoragebootcamp_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabasePiyushT_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase_EMPH02217_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase_EMPH22073_raghav_connectionString": {
+			"value": ""
+		},
+		"Bootcamp_BlobStorage_connectionString": {
+			"value": ""
+		},
+		"DestLinkedService_2284_connectionString": {
+			"value": ""
+		},
+		"EMP00895_BLOB_connectionString": {
+			"value": ""
+		},
+		"EMP01112_AzureSqlDatabase_connectionString": {
+			"value": ""
+		},
+		"EMP01137_AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"EMP2336_AzureBlob_connectionString": {
+			"value": ""
+		},
+		"EMP2336_AzureSQL_connectionString": {
+			"value": ""
+		},
+		"EMP2336_Azure_Blob_Storage_connectionString": {
+			"value": ""
+		},
+		"EMP2336_Azure_SQL_Database_connectionString": {
+			"value": ""
+		},
+		"EMPH2257_Umesh_connectionString": {
+			"value": ""
+		},
+		"EMPH2258Milind_connectionString": {
+			"value": ""
+		},
+		"EMPH2258Milind_AzureBlob_connectionString": {
+			"value": ""
+		},
+		"EMPH2259_AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"EMPH2259_AzureSqlDatabase_connectionString": {
+			"value": ""
+		},
+		"EMPH2264_Blob_connectionString": {
+			"value": ""
+		},
+		"EMPH2264_ExtendedBootCamp_connectionString": {
+			"value": ""
+		},
+		"EMPH2290_AZURESQL_connectionString": {
+			"value": ""
+		},
+		"EMPH2290_BLOB_connectionString": {
+			"value": ""
+		},
+		"EMPH2302_Azure_Blob_Storage_connectionString": {
+			"value": ""
+		},
+		"EMPH2302_Azure_SQL_Database_connectionString": {
+			"value": ""
+		},
+		"EMPH2329_BLOB_connectionString": {
+			"value": ""
+		},
+		"EMPH2329_DB_connectionString": {
+			"value": ""
+		},
+		"EMPH2337_AzureBlobStorage_connectionString": {
+			"value": ""
+		},
+		"EMPH2337_AzureSqlDatabase_connectionString": {
+			"value": ""
+		},
+		"SourceLinkedService_2284_connectionString": {
+			"value": ""
+		},
+		"bootcamp_connectionString": {
+			"value": ""
+		}
+	}
+}
