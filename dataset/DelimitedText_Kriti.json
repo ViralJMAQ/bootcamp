@@ -19,195 +19,71 @@
 		},
 		"schema": [
 			{
-				"name": "MatcH_id",
+				"name": "Match_SK",
 				"type": "String"
 			},
 			{
-				"name": "Over_id",
+				"name": "match_id",
 				"type": "String"
 			},
 			{
-				"name": "Ball_id",
+				"name": "Team1",
 				"type": "String"
 			},
 			{
-				"name": "Innings_No",
+				"name": "Team2",
 				"type": "String"
 			},
 			{
-				"name": "Team_Batting",
+				"name": "match_date",
 				"type": "String"
 			},
 			{
-				"name": "Team_Bowling",
+				"name": "Season_Year",
 				"type": "String"
 			},
 			{
-				"name": "Striker_Batting_Position",
+				"name": "Venue_Name",
 				"type": "String"
 			},
 			{
-				"name": "Extra_Type",
+				"name": "City_Name",
 				"type": "String"
 			},
 			{
-				"name": "Runs_Scored",
+				"name": "Country_Name",
 				"type": "String"
 			},
 			{
-				"name": "Extra_runs",
+				"name": "Toss_Winner",
 				"type": "String"
 			},
 			{
-				"name": "Wides",
+				"name": "match_winner",
 				"type": "String"
 			},
 			{
-				"name": "Legbyes",
+				"name": "Toss_Name",
 				"type": "String"
 			},
 			{
-				"name": "Byes",
+				"name": "Win_Type",
 				"type": "String"
 			},
 			{
-				"name": "Noballs",
+				"name": "Outcome_Type",
 				"type": "String"
 			},
 			{
-				"name": "Penalty",
+				"name": "ManOfMach",
 				"type": "String"
 			},
 			{
-				"name": "Bowler_Extras",
+				"name": "Win_Margin",
 				"type": "String"
 			},
 			{
-				"name": "Out_type",
-				"type": "String"
-			},
-			{
-				"name": "Caught",
-				"type": "String"
-			},
-			{
-				"name": "Bowled",
-				"type": "String"
-			},
-			{
-				"name": "Run_out",
-				"type": "String"
-			},
-			{
-				"name": "LBW",
-				"type": "String"
-			},
-			{
-				"name": "Retired_hurt",
-				"type": "String"
-			},
-			{
-				"name": "Stumped",
-				"type": "String"
-			},
-			{
-				"name": "caught_and_bowled",
-				"type": "String"
-			},
-			{
-				"name": "hit_wicket",
-				"type": "String"
-			},
-			{
-				"name": "ObstructingFeild",
-				"type": "String"
-			},
-			{
-				"name": "Bowler_Wicket",
-				"type": "String"
-			},
-			{
-				"name": "Match_Date",
-				"type": "String"
-			},
-			{
-				"name": "Season",
-				"type": "String"
-			},
-			{
-				"name": "Striker",
-				"type": "String"
-			},
-			{
-				"name": "Non_Striker",
-				"type": "String"
-			},
-			{
-				"name": "Bowler",
-				"type": "String"
-			},
-			{
-				"name": "Player_Out",
-				"type": "String"
-			},
-			{
-				"name": "Fielders",
-				"type": "String"
-			},
-			{
-				"name": "Striker_match_SK",
-				"type": "String"
-			},
-			{
-				"name": "StrikerSK",
-				"type": "String"
-			},
-			{
-				"name": "NonStriker_match_SK",
-				"type": "String"
-			},
-			{
-				"name": "NONStriker_SK",
-				"type": "String"
-			},
-			{
-				"name": "Fielder_match_SK",
-				"type": "String"
-			},
-			{
-				"name": "Fielder_SK",
-				"type": "String"
-			},
-			{
-				"name": "Bowler_match_SK",
-				"type": "String"
-			},
-			{
-				"name": "BOWLER_SK",
-				"type": "String"
-			},
-			{
-				"name": "PlayerOut_match_SK",
-				"type": "String"
-			},
-			{
-				"name": "BattingTeam_SK",
-				"type": "String"
-			},
-			{
-				"name": "BowlingTeam_SK",
-				"type": "String"
-			},
-			{
-				"name": "Keeper_Catch",
-				"type": "String"
-			},
-			{
-				"name": "Player_out_sk",
-				"type": "String"
-			},
-			{
-				"name": "MatchDateSK",
+				"name": "Country_id",
 				"type": "String"
 			}
 		]
