@@ -1,5 +1,5 @@
 {
-	"name": "pipeline_emp02217",
+	"name": "EMPH2302_Copy_Pipeline",
 	"properties": {
 		"activities": [
 			{
@@ -27,19 +27,7 @@
 						"type": "AzureSqlSink"
 					},
 					"enableStaging": false
-				},
-				"inputs": [
-					{
-						"referenceName": "Match_emp02217",
-						"type": "DatasetReference"
-					}
-				],
-				"outputs": [
-					{
-						"referenceName": "AzureSqlTable_2217",
-						"type": "DatasetReference"
-					}
-				]
+				}
 			},
 			{
 				"name": "Stored Procedure1",
