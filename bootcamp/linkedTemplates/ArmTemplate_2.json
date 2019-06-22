@@ -6,62 +6,6 @@
 			"type": "string",
 			"metadata": "Data Factory Name",
 			"defaultValue": "bootcamp"
-		},
-		"EMPH2264_ExtendedBootCamp_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'EMPH2264_ExtendedBootCamp'"
-		},
-		"EMPH2290_AZURESQL_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'EMPH2290_AZURESQL'"
-		},
-		"EMPH2290_BLOB_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'EMPH2290_BLOB'"
-		},
-		"EMPH2302_Azure_Blob_Storage_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'EMPH2302_Azure_Blob_Storage'"
-		},
-		"EMPH2302_Azure_SQL_Database_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'EMPH2302_Azure_SQL_Database'"
-		},
-		"EMPH2329_BLOB_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'EMPH2329_BLOB'"
-		},
-		"EMPH2329_DB_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'EMPH2329_DB'"
-		},
-		"EMPH2337_AzureBlobStorage_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'EMPH2337_AzureBlobStorage'"
-		},
-		"EMPH2337_AzureSqlDatabase_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'EMPH2337_AzureSqlDatabase'"
-		},
-		"ExtendedBootcamp_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'ExtendedBootcamp'"
-		},
-		"MatchCsv_BlobStorage_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'MatchCsv_BlobStorage'"
-		},
-		"SourceLinkedService_2284_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'SourceLinkedService_2284'"
-		},
-		"bootcamp_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'bootcamp'"
-		},
-		"extendedbootcampsa_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'extendedbootcampsa'"
 		}
 	},
 	"variables": {
@@ -69,284 +13,12 @@
 	},
 	"resources": [
 		{
-			"name": "[concat(parameters('factoryName'), '/EMPH2264_ExtendedBootCamp')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureSqlDatabase",
-				"typeProperties": {
-					"connectionString": "[parameters('EMPH2264_ExtendedBootCamp_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/EMPH2290_AZURESQL')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureSqlDatabase",
-				"typeProperties": {
-					"connectionString": "[parameters('EMPH2290_AZURESQL_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/EMPH2290_BLOB')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobStorage",
-				"typeProperties": {
-					"connectionString": "[parameters('EMPH2290_BLOB_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/EMPH2302_Azure_Blob_Storage')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobStorage",
-				"typeProperties": {
-					"connectionString": "[parameters('EMPH2302_Azure_Blob_Storage_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/EMPH2302_Azure_SQL_Database')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureSqlDatabase",
-				"typeProperties": {
-					"connectionString": "[parameters('EMPH2302_Azure_SQL_Database_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/EMPH2329_BLOB')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"description": "EMPH2329_BLOB",
-				"annotations": [],
-				"type": "AzureBlobStorage",
-				"typeProperties": {
-					"connectionString": "[parameters('EMPH2329_BLOB_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/EMPH2329_DB')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"description": "EMPH2329_DB",
-				"annotations": [],
-				"type": "AzureSqlDatabase",
-				"typeProperties": {
-					"connectionString": "[parameters('EMPH2329_DB_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/EMPH2337_AzureBlobStorage')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobStorage",
-				"typeProperties": {
-					"connectionString": "[parameters('EMPH2337_AzureBlobStorage_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/EMPH2337_AzureSqlDatabase')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureSqlDatabase",
-				"typeProperties": {
-					"connectionString": "[parameters('EMPH2337_AzureSqlDatabase_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/ExtendedBootcamp')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureSqlDatabase",
-				"typeProperties": {
-					"connectionString": "[parameters('ExtendedBootcamp_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/MatchCsv_BlobStorage')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"description": "Match",
-				"annotations": [],
-				"type": "AzureBlobStorage",
-				"typeProperties": {
-					"connectionString": "[parameters('MatchCsv_BlobStorage_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/SourceLinkedService_2284')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureSqlDatabase",
-				"typeProperties": {
-					"connectionString": "[parameters('SourceLinkedService_2284_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/bootcamp')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureSqlDatabase",
-				"typeProperties": {
-					"connectionString": "[parameters('bootcamp_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/extendedbootcampsa')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobStorage",
-				"typeProperties": {
-					"connectionString": "[parameters('extendedbootcampsa_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureSqlTable_2217')]",
+			"name": "[concat(parameters('factoryName'), '/DST_AzureSQL_Match_2258')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"linkedServiceName": {
-					"referenceName": "AzureSqlDatabase_EMPH02217",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [
-					{
-						"name": "Prop_0",
-						"type": "varchar"
-					},
-					{
-						"name": "Prop_1",
-						"type": "varchar"
-					},
-					{
-						"name": "Prop_2",
-						"type": "varchar"
-					},
-					{
-						"name": "Prop_3",
-						"type": "varchar"
-					},
-					{
-						"name": "Prop_4",
-						"type": "varchar"
-					},
-					{
-						"name": "Prop_5",
-						"type": "varchar"
-					},
-					{
-						"name": "Prop_6",
-						"type": "varchar"
-					},
-					{
-						"name": "Prop_7",
-						"type": "varchar"
-					},
-					{
-						"name": "Prop_8",
-						"type": "varchar"
-					},
-					{
-						"name": "Prop_9",
-						"type": "varchar"
-					},
-					{
-						"name": "Prop_10",
-						"type": "varchar"
-					},
-					{
-						"name": "Prop_11",
-						"type": "varchar"
-					},
-					{
-						"name": "Prop_12",
-						"type": "varchar"
-					},
-					{
-						"name": "Prop_13",
-						"type": "varchar"
-					},
-					{
-						"name": "Prop_14",
-						"type": "varchar"
-					},
-					{
-						"name": "Prop_15",
-						"type": "varchar"
-					},
-					{
-						"name": "Prop_16",
-						"type": "varchar"
-					}
-				],
-				"typeProperties": {
-					"tableName": "[[EMP02217].[Match]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/Destination_MatchData')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ADW_Bootcamp",
+					"referenceName": "EMPH2258Milind",
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
@@ -354,75 +26,81 @@
 				"schema": [
 					{
 						"name": "Match_SK",
-						"type": "varchar"
+						"type": "int",
+						"precision": 10
 					},
 					{
 						"name": "match_id",
-						"type": "varchar"
+						"type": "int",
+						"precision": 10
 					},
 					{
 						"name": "Team1",
-						"type": "varchar"
+						"type": "nvarchar"
 					},
 					{
 						"name": "Team2",
-						"type": "varchar"
+						"type": "nvarchar"
 					},
 					{
 						"name": "match_date",
-						"type": "varchar"
+						"type": "datetime2",
+						"scale": 7
 					},
 					{
 						"name": "Season_Year",
-						"type": "varchar"
+						"type": "int",
+						"precision": 10
 					},
 					{
 						"name": "Venue_Name",
-						"type": "varchar"
+						"type": "nvarchar"
 					},
 					{
 						"name": "City_Name",
-						"type": "varchar"
+						"type": "nvarchar"
 					},
 					{
 						"name": "Country_Name",
-						"type": "varchar"
+						"type": "nvarchar"
 					},
 					{
 						"name": "Toss_Winner",
-						"type": "varchar"
+						"type": "nvarchar"
 					},
 					{
 						"name": "match_winner",
-						"type": "varchar"
+						"type": "nvarchar"
 					},
 					{
 						"name": "Toss_Name",
-						"type": "varchar"
+						"type": "nvarchar"
 					},
 					{
 						"name": "Win_Type",
-						"type": "varchar"
+						"type": "nvarchar"
 					},
 					{
 						"name": "Outcome_Type",
-						"type": "varchar"
+						"type": "nvarchar"
 					},
 					{
 						"name": "ManOfMach",
-						"type": "varchar"
+						"type": "nvarchar"
 					},
 					{
 						"name": "Win_Margin",
-						"type": "varchar"
+						"type": "int",
+						"precision": 10
 					},
 					{
 						"name": "Country_id",
-						"type": "varchar"
+						"type": "int",
+						"precision": 10
 					}
 				],
 				"typeProperties": {
-					"tableName": "[[EMPH2288].[Match]"
+					"tableName": "[[EMPH2258].[Match]"
 				}
 			},
 			"dependsOn": []
@@ -446,6 +124,8 @@
 					},
 					"columnDelimiter": ",",
 					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"nullValue": "NULL",
 					"quoteChar": "\""
 				},
 				"schema": [
@@ -617,110 +297,13 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/Source_MatchData')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "MatchCsv_BlobStorage",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "DelimitedText",
-				"typeProperties": {
-					"location": {
-						"type": "AzureBlobStorageLocation",
-						"fileName": "Match.csv",
-						"container": "source"
-					},
-					"columnDelimiter": ",",
-					"escapeChar": "\\",
-					"firstRowAsHeader": true,
-					"quoteChar": "\""
-				},
-				"schema": [
-					{
-						"name": "Prop_0",
-						"type": "String"
-					},
-					{
-						"name": "Prop_1",
-						"type": "String"
-					},
-					{
-						"name": "Prop_2",
-						"type": "String"
-					},
-					{
-						"name": "Prop_3",
-						"type": "String"
-					},
-					{
-						"name": "Prop_4",
-						"type": "String"
-					},
-					{
-						"name": "Prop_5",
-						"type": "String"
-					},
-					{
-						"name": "Prop_6",
-						"type": "String"
-					},
-					{
-						"name": "Prop_7",
-						"type": "String"
-					},
-					{
-						"name": "Prop_8",
-						"type": "String"
-					},
-					{
-						"name": "Prop_9",
-						"type": "String"
-					},
-					{
-						"name": "Prop_10",
-						"type": "String"
-					},
-					{
-						"name": "Prop_11",
-						"type": "String"
-					},
-					{
-						"name": "Prop_12",
-						"type": "String"
-					},
-					{
-						"name": "Prop_13",
-						"type": "String"
-					},
-					{
-						"name": "Prop_14",
-						"type": "String"
-					},
-					{
-						"name": "Prop_15",
-						"type": "String"
-					},
-					{
-						"name": "Prop_16",
-						"type": "String"
-					}
-				]
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/MatchCsv_BlobStorage')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/EMPH2288_CopyData_MatchData')]",
+			"name": "[concat(parameters('factoryName'), '/CopyMatchPipeline')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"activities": [
 					{
-						"name": "CopyMatchData",
+						"name": "Copy Data1",
 						"type": "Copy",
 						"dependsOn": [],
 						"policy": {
@@ -736,20 +319,16 @@
 								"type": "DelimitedTextSource",
 								"storeSettings": {
 									"type": "AzureBlobStorageReadSetting",
-									"recursive": false,
-									"wildcardFileName": "Match.csv",
-									"enablePartitionDiscovery": false
+									"recursive": true
 								},
 								"formatSettings": {
 									"type": "DelimitedTextReadSetting"
 								}
 							},
 							"sink": {
-								"type": "AzureSqlSink",
-								"preCopyScript": "DROP TABLE IF EXISTS [EMPH2288].[Match]\nCREATE TABLE [EMPH2288].[Match](\n\t[Match_SK] [varchar](50) NULL,\n\t[match_id] [varchar](50) NULL,\n\t[Team1] [varchar](50) NULL,\n\t[Team2] [varchar](50) NULL,\n\t[match_date] [varchar](50) NULL,\n\t[Season_Year] [varchar](50) NULL,\n\t[Venue_Name] [varchar](50) NULL,\n\t[City_Name] [varchar](50) NULL,\n\t[Country_Name] [varchar](50) NULL,\n\t[Toss_Winner] [varchar](50) NULL,\n\t[match_winner] [varchar](50) NULL,\n\t[Toss_Name] [varchar](50) NULL,\n\t[Win_Type] [varchar](50) NULL,\n\t[Outcome_Type] [varchar](50) NULL,\n\t[ManOfMach] [varchar](50) NULL,\n\t[Win_Margin] [varchar](50) NULL,\n\t[Country_id] [varchar](50) NULL\n) ON [PRIMARY]\n"
+								"type": "AzureSqlSink"
 							},
 							"enableStaging": false,
-							"enableSkipIncompatibleRow": true,
 							"translator": {
 								"type": "TabularTranslator",
 								"mappings": [
@@ -760,7 +339,7 @@
 										},
 										"sink": {
 											"name": "Match_SK",
-											"type": "String"
+											"type": "Int32"
 										}
 									},
 									{
@@ -770,7 +349,7 @@
 										},
 										"sink": {
 											"name": "match_id",
-											"type": "String"
+											"type": "Int32"
 										}
 									},
 									{
@@ -800,7 +379,7 @@
 										},
 										"sink": {
 											"name": "match_date",
-											"type": "String"
+											"type": "DateTime"
 										}
 									},
 									{
@@ -810,7 +389,7 @@
 										},
 										"sink": {
 											"name": "Season_Year",
-											"type": "String"
+											"type": "Int32"
 										}
 									},
 									{
@@ -910,7 +489,7 @@
 										},
 										"sink": {
 											"name": "Win_Margin",
-											"type": "String"
+											"type": "Int32"
 										}
 									},
 									{
@@ -920,7 +499,7 @@
 										},
 										"sink": {
 											"name": "Country_id",
-											"type": "String"
+											"type": "Int32"
 										}
 									}
 								]
@@ -928,25 +507,82 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "Source_MatchData",
+								"referenceName": "Match",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
 						],
 						"outputs": [
 							{
-								"referenceName": "Destination_MatchData",
+								"referenceName": "DST_AzureSQL_Match_2258",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/Match')]",
+				"[concat(variables('factoryId'), '/datasets/DST_AzureSQL_Match_2258')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/pipeline_emp02217')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Copy Data1",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "DelimitedTextSource",
+								"storeSettings": {
+									"type": "AzureBlobStorageReadSetting",
+									"recursive": true
+								},
+								"formatSettings": {
+									"type": "DelimitedTextReadSetting"
+								}
+							},
+							"sink": {
+								"type": "AzureSqlSink"
+							},
+							"enableStaging": false
+						},
+						"inputs": [
+							{
+								"referenceName": "Match_emp02217",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "AzureSqlTable_2217",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
 						]
 					},
 					{
-						"name": "GetTop5Matches",
+						"name": "Stored Procedure1",
 						"type": "SqlServerStoredProcedure",
 						"dependsOn": [
 							{
-								"activity": "CopyMatchData",
+								"activity": "Copy Data1",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -961,10 +597,10 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"storedProcedureName": "[[EMPH2288].[getTop5Matches]"
+							"storedProcedureName": "[[EMP02217].[usp_top5matches]"
 						},
 						"linkedServiceName": {
-							"referenceName": "ADW_Bootcamp",
+							"referenceName": "AzureSqlDatabase_EMPH02217",
 							"type": "LinkedServiceReference"
 						}
 					}
@@ -972,8 +608,7 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/Source_MatchData')]",
-				"[concat(variables('factoryId'), '/datasets/Destination_MatchData')]"
+				"[concat(variables('factoryId'), '/datasets/Match_emp02217')]"
 			]
 		}
 	]

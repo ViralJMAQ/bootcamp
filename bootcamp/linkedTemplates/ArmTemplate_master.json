@@ -7,33 +7,17 @@
 			"metadata": "Data Factory Name",
 			"defaultValue": "bootcamp"
 		},
-		"ADW_Bootcamp_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'ADW_Bootcamp'"
-		},
 		"ADW_maqbootcamp_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ADW_maqbootcamp'"
-		},
-		"AzureBlobStorage_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage'"
 		},
 		"AzureBlobStorage1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
 		},
-		"AzureBlobStorage2_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2'"
-		},
 		"AzureBlobStorage2_EMPH2239_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2_EMPH2239'"
-		},
-		"AzureBlobStorageEMP22262_Srinivas_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorageEMP22262_Srinivas'"
 		},
 		"AzureBlobStoragePiyushT_connectionString": {
 			"type": "secureString",
@@ -51,10 +35,6 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStoragebootcamp'"
 		},
-		"AzureSqlDatabase_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase'"
-		},
 		"AzureSqlDatabase1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'"
@@ -63,17 +43,9 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase2'"
 		},
-		"AzureSqlDatabaseEMP22262_Srinivas_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseEMP22262_Srinivas'"
-		},
 		"AzureSqlDatabasePiyushT_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabasePiyushT'"
-		},
-		"AzureSqlDatabase_2339_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase_2339'"
 		},
 		"AzureSqlDatabase_EMPH02217_connectionString": {
 			"type": "secureString",
@@ -82,10 +54,6 @@
 		"AzureSqlDatabase_EMPH22073_raghav_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase_EMPH22073_raghav'"
-		},
-		"AzureSqlDatabase_Kriti_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase_Kriti'"
 		},
 		"Bootcamp_BlobStorage_connectionString": {
 			"type": "secureString",
@@ -107,22 +75,6 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'EMP01137_AzureSqlDatabase1'"
 		},
-		"EMP01137_Blob_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'EMP01137_Blob'"
-		},
-		"EMP01137_SQL_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'EMP01137_SQL'"
-		},
-		"EMP01157_AzureBlobStorage_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'EMP01157_AzureBlobStorage'"
-		},
-		"EMP01157_AzureSqlDatabase_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'EMP01157_AzureSqlDatabase'"
-		},
 		"EMP2336_AzureBlob_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'EMP2336_AzureBlob'"
@@ -138,10 +90,6 @@
 		"EMP2336_Azure_SQL_Database_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'EMP2336_Azure_SQL_Database'"
-		},
-		"EMPH2213_Blob_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'EMPH2213_Blob'"
 		},
 		"EMPH2257_Umesh_connectionString": {
 			"type": "secureString",
@@ -203,14 +151,6 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'EMPH2337_AzureSqlDatabase'"
 		},
-		"ExtendedBootcamp_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'ExtendedBootcamp'"
-		},
-		"MatchCsv_BlobStorage_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'MatchCsv_BlobStorage'"
-		},
 		"SourceLinkedService_2284_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'SourceLinkedService_2284'"
@@ -218,10 +158,6 @@
 		"bootcamp_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'bootcamp'"
-		},
-		"extendedbootcampsa_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'extendedbootcampsa'"
 		},
 		"containerUri": {
 			"type": "string",
@@ -250,26 +186,14 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"ADW_Bootcamp_connectionString": {
-						"value": "[parameters('ADW_Bootcamp_connectionString')]"
-					},
 					"ADW_maqbootcamp_connectionString": {
 						"value": "[parameters('ADW_maqbootcamp_connectionString')]"
-					},
-					"AzureBlobStorage_connectionString": {
-						"value": "[parameters('AzureBlobStorage_connectionString')]"
 					},
 					"AzureBlobStorage1_connectionString": {
 						"value": "[parameters('AzureBlobStorage1_connectionString')]"
 					},
-					"AzureBlobStorage2_connectionString": {
-						"value": "[parameters('AzureBlobStorage2_connectionString')]"
-					},
 					"AzureBlobStorage2_EMPH2239_connectionString": {
 						"value": "[parameters('AzureBlobStorage2_EMPH2239_connectionString')]"
-					},
-					"AzureBlobStorageEMP22262_Srinivas_connectionString": {
-						"value": "[parameters('AzureBlobStorageEMP22262_Srinivas_connectionString')]"
 					},
 					"AzureBlobStoragePiyushT_connectionString": {
 						"value": "[parameters('AzureBlobStoragePiyushT_connectionString')]"
@@ -283,23 +207,14 @@
 					"AzureBlobStoragebootcamp_connectionString": {
 						"value": "[parameters('AzureBlobStoragebootcamp_connectionString')]"
 					},
-					"AzureSqlDatabase_connectionString": {
-						"value": "[parameters('AzureSqlDatabase_connectionString')]"
-					},
 					"AzureSqlDatabase1_connectionString": {
 						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
 					},
 					"AzureSqlDatabase2_connectionString": {
 						"value": "[parameters('AzureSqlDatabase2_connectionString')]"
 					},
-					"AzureSqlDatabaseEMP22262_Srinivas_connectionString": {
-						"value": "[parameters('AzureSqlDatabaseEMP22262_Srinivas_connectionString')]"
-					},
 					"AzureSqlDatabasePiyushT_connectionString": {
 						"value": "[parameters('AzureSqlDatabasePiyushT_connectionString')]"
-					},
-					"AzureSqlDatabase_2339_connectionString": {
-						"value": "[parameters('AzureSqlDatabase_2339_connectionString')]"
 					},
 					"AzureSqlDatabase_EMPH02217_connectionString": {
 						"value": "[parameters('AzureSqlDatabase_EMPH02217_connectionString')]"
@@ -307,8 +222,29 @@
 					"AzureSqlDatabase_EMPH22073_raghav_connectionString": {
 						"value": "[parameters('AzureSqlDatabase_EMPH22073_raghav_connectionString')]"
 					},
-					"AzureSqlDatabase_Kriti_connectionString": {
-						"value": "[parameters('AzureSqlDatabase_Kriti_connectionString')]"
+					"Bootcamp_BlobStorage_connectionString": {
+						"value": "[parameters('Bootcamp_BlobStorage_connectionString')]"
+					},
+					"DestLinkedService_2284_connectionString": {
+						"value": "[parameters('DestLinkedService_2284_connectionString')]"
+					},
+					"EMP00895_BLOB_connectionString": {
+						"value": "[parameters('EMP00895_BLOB_connectionString')]"
+					},
+					"EMP01112_AzureSqlDatabase_connectionString": {
+						"value": "[parameters('EMP01112_AzureSqlDatabase_connectionString')]"
+					},
+					"EMP01137_AzureSqlDatabase1_connectionString": {
+						"value": "[parameters('EMP01137_AzureSqlDatabase1_connectionString')]"
+					},
+					"EMP2336_AzureBlob_connectionString": {
+						"value": "[parameters('EMP2336_AzureBlob_connectionString')]"
+					},
+					"EMP2336_AzureSQL_connectionString": {
+						"value": "[parameters('EMP2336_AzureSQL_connectionString')]"
+					},
+					"EMP2336_Azure_Blob_Storage_connectionString": {
+						"value": "[parameters('EMP2336_Azure_Blob_Storage_connectionString')]"
 					}
 				}
 			},
@@ -328,47 +264,8 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"Bootcamp_BlobStorage_connectionString": {
-						"value": "[parameters('Bootcamp_BlobStorage_connectionString')]"
-					},
-					"DestLinkedService_2284_connectionString": {
-						"value": "[parameters('DestLinkedService_2284_connectionString')]"
-					},
-					"EMP00895_BLOB_connectionString": {
-						"value": "[parameters('EMP00895_BLOB_connectionString')]"
-					},
-					"EMP01112_AzureSqlDatabase_connectionString": {
-						"value": "[parameters('EMP01112_AzureSqlDatabase_connectionString')]"
-					},
-					"EMP01137_AzureSqlDatabase1_connectionString": {
-						"value": "[parameters('EMP01137_AzureSqlDatabase1_connectionString')]"
-					},
-					"EMP01137_Blob_connectionString": {
-						"value": "[parameters('EMP01137_Blob_connectionString')]"
-					},
-					"EMP01137_SQL_connectionString": {
-						"value": "[parameters('EMP01137_SQL_connectionString')]"
-					},
-					"EMP01157_AzureBlobStorage_connectionString": {
-						"value": "[parameters('EMP01157_AzureBlobStorage_connectionString')]"
-					},
-					"EMP01157_AzureSqlDatabase_connectionString": {
-						"value": "[parameters('EMP01157_AzureSqlDatabase_connectionString')]"
-					},
-					"EMP2336_AzureBlob_connectionString": {
-						"value": "[parameters('EMP2336_AzureBlob_connectionString')]"
-					},
-					"EMP2336_AzureSQL_connectionString": {
-						"value": "[parameters('EMP2336_AzureSQL_connectionString')]"
-					},
-					"EMP2336_Azure_Blob_Storage_connectionString": {
-						"value": "[parameters('EMP2336_Azure_Blob_Storage_connectionString')]"
-					},
 					"EMP2336_Azure_SQL_Database_connectionString": {
 						"value": "[parameters('EMP2336_Azure_SQL_Database_connectionString')]"
-					},
-					"EMPH2213_Blob_connectionString": {
-						"value": "[parameters('EMPH2213_Blob_connectionString')]"
 					},
 					"EMPH2257_Umesh_connectionString": {
 						"value": "[parameters('EMPH2257_Umesh_connectionString')]"
@@ -387,26 +284,6 @@
 					},
 					"EMPH2264_Blob_connectionString": {
 						"value": "[parameters('EMPH2264_Blob_connectionString')]"
-					}
-				}
-			},
-			"dependsOn": [
-				"[resourceId('Microsoft.Resources/deployments', 'ArmTemplate_0')]"
-			]
-		},
-		{
-			"name": "ArmTemplate_2",
-			"type": "Microsoft.Resources/deployments",
-			"apiVersion": "2018-02-01",
-			"properties": {
-				"mode": "incremental",
-				"templateLink": {
-					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
-					"contentVersion": "1.0.0.0"
-				},
-				"parameters": {
-					"factoryName": {
-						"value": "[parameters('factoryName')]"
 					},
 					"EMPH2264_ExtendedBootCamp_connectionString": {
 						"value": "[parameters('EMPH2264_ExtendedBootCamp_connectionString')]"
@@ -435,35 +312,26 @@
 					"EMPH2337_AzureSqlDatabase_connectionString": {
 						"value": "[parameters('EMPH2337_AzureSqlDatabase_connectionString')]"
 					},
-					"ExtendedBootcamp_connectionString": {
-						"value": "[parameters('ExtendedBootcamp_connectionString')]"
-					},
-					"MatchCsv_BlobStorage_connectionString": {
-						"value": "[parameters('MatchCsv_BlobStorage_connectionString')]"
-					},
 					"SourceLinkedService_2284_connectionString": {
 						"value": "[parameters('SourceLinkedService_2284_connectionString')]"
 					},
 					"bootcamp_connectionString": {
 						"value": "[parameters('bootcamp_connectionString')]"
-					},
-					"extendedbootcampsa_connectionString": {
-						"value": "[parameters('extendedbootcampsa_connectionString')]"
 					}
 				}
 			},
 			"dependsOn": [
-				"[resourceId('Microsoft.Resources/deployments', 'ArmTemplate_1')]"
+				"[resourceId('Microsoft.Resources/deployments', 'ArmTemplate_0')]"
 			]
 		},
 		{
-			"name": "ArmTemplate_3",
+			"name": "ArmTemplate_2",
 			"type": "Microsoft.Resources/deployments",
 			"apiVersion": "2018-02-01",
 			"properties": {
 				"mode": "incremental",
 				"templateLink": {
-					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_3.json', parameters('containerSasToken'))]",
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
 					"contentVersion": "1.0.0.0"
 				},
 				"parameters": {
@@ -473,7 +341,7 @@
 				}
 			},
 			"dependsOn": [
-				"[resourceId('Microsoft.Resources/deployments', 'ArmTemplate_2')]"
+				"[resourceId('Microsoft.Resources/deployments', 'ArmTemplate_1')]"
 			]
 		}
 	]
