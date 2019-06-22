@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy Data1",
+				"name": "Copy_Data_Blob_to_Azure",
 				"type": "Copy",
 				"policy": {
 					"timeout": "7.00:00:00",
@@ -217,11 +217,11 @@
 				]
 			},
 			{
-				"name": "Stored Procedure1",
+				"name": "Top5_Matches",
 				"type": "SqlServerStoredProcedure",
 				"dependsOn": [
 					{
-						"activity": "Copy Data1",
+						"activity": "Copy_Data_Blob_to_Azure",
 						"dependencyConditions": [
 							"Succeeded"
 						]
