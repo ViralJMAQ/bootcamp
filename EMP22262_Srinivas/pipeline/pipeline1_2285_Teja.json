@@ -32,8 +32,8 @@
 						"mappings": [
 							{
 								"source": {
-									"type": "String",
-									"ordinal": 1
+									"name": "Match_SK",
+									"type": "String"
 								},
 								"sink": {
 									"name": "Match_SK",
@@ -42,8 +42,8 @@
 							},
 							{
 								"source": {
-									"type": "String",
-									"ordinal": 2
+									"name": "match_id",
+									"type": "String"
 								},
 								"sink": {
 									"name": "match_id",
@@ -52,8 +52,8 @@
 							},
 							{
 								"source": {
-									"type": "String",
-									"ordinal": 3
+									"name": "Team1",
+									"type": "String"
 								},
 								"sink": {
 									"name": "Team1",
@@ -62,8 +62,8 @@
 							},
 							{
 								"source": {
-									"type": "String",
-									"ordinal": 4
+									"name": "Team2",
+									"type": "String"
 								},
 								"sink": {
 									"name": "Team2",
@@ -72,8 +72,8 @@
 							},
 							{
 								"source": {
-									"type": "String",
-									"ordinal": 5
+									"name": "match_date",
+									"type": "String"
 								},
 								"sink": {
 									"name": "match_date",
@@ -82,8 +82,8 @@
 							},
 							{
 								"source": {
-									"type": "String",
-									"ordinal": 6
+									"name": "Season_Year",
+									"type": "String"
 								},
 								"sink": {
 									"name": "Season_Year",
@@ -92,8 +92,8 @@
 							},
 							{
 								"source": {
-									"type": "String",
-									"ordinal": 7
+									"name": "Venue_Name",
+									"type": "String"
 								},
 								"sink": {
 									"name": "Venue_Name",
@@ -102,8 +102,8 @@
 							},
 							{
 								"source": {
-									"type": "String",
-									"ordinal": 8
+									"name": "City_Name",
+									"type": "String"
 								},
 								"sink": {
 									"name": "City_Name",
@@ -112,8 +112,8 @@
 							},
 							{
 								"source": {
-									"type": "String",
-									"ordinal": 9
+									"name": "Country_Name",
+									"type": "String"
 								},
 								"sink": {
 									"name": "Country_Name",
@@ -122,8 +122,8 @@
 							},
 							{
 								"source": {
-									"type": "String",
-									"ordinal": 10
+									"name": "Toss_Winner",
+									"type": "String"
 								},
 								"sink": {
 									"name": "Toss_Winner",
@@ -132,8 +132,8 @@
 							},
 							{
 								"source": {
-									"type": "String",
-									"ordinal": 11
+									"name": "match_winner",
+									"type": "String"
 								},
 								"sink": {
 									"name": "match_winner",
@@ -142,8 +142,8 @@
 							},
 							{
 								"source": {
-									"type": "String",
-									"ordinal": 12
+									"name": "Toss_Name",
+									"type": "String"
 								},
 								"sink": {
 									"name": "Toss_Name",
@@ -152,8 +152,8 @@
 							},
 							{
 								"source": {
-									"type": "String",
-									"ordinal": 13
+									"name": "Win_Type",
+									"type": "String"
 								},
 								"sink": {
 									"name": "Win_Type",
@@ -162,8 +162,8 @@
 							},
 							{
 								"source": {
-									"type": "String",
-									"ordinal": 14
+									"name": "Outcome_Type",
+									"type": "String"
 								},
 								"sink": {
 									"name": "Outcome_Type",
@@ -172,8 +172,8 @@
 							},
 							{
 								"source": {
-									"type": "String",
-									"ordinal": 15
+									"name": "ManOfMach",
+									"type": "String"
 								},
 								"sink": {
 									"name": "ManOfMach",
@@ -182,8 +182,8 @@
 							},
 							{
 								"source": {
-									"type": "String",
-									"ordinal": 16
+									"name": "Win_Margin",
+									"type": "String"
 								},
 								"sink": {
 									"name": "Win_Margin",
@@ -192,8 +192,8 @@
 							},
 							{
 								"source": {
-									"type": "String",
-									"ordinal": 17
+									"name": "Country_id",
+									"type": "String"
 								},
 								"sink": {
 									"name": "Country_id",
