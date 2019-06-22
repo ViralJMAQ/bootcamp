@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "Top5_WinMarginPipeline",
 	"properties": {
 		"activities": [
 			{
