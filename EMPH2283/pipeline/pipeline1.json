@@ -1,0 +1,72 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Match_Blob_to_SQL",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSetting",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSetting"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "Match",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "EMPH2259_AzureSqlTable",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Stored Procedure1",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "Match_Blob_to_SQL",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"storedProcedureName": "[EMPH2259].[usp_EMPH2259_WinMargin]"
+				},
+				"linkedServiceName": {
+					"referenceName": "EMPH2259_AzureSqlDatabase",
+					"type": "LinkedServiceReference"
+				}
+			}
+		]
+	}
+}
