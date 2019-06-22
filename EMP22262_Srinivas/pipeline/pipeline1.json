@@ -14,18 +14,17 @@
 				},
 				"typeProperties": {
 					"source": {
-						"type": "AzureSqlSource"
-					},
-					"sink": {
-						"type": "DelimitedTextSink",
+						"type": "DelimitedTextSource",
 						"storeSettings": {
-							"type": "AzureBlobStorageWriteSetting"
+							"type": "AzureBlobStorageReadSetting",
+							"recursive": true
 						},
 						"formatSettings": {
-							"type": "DelimitedTextWriteSetting",
-							"quoteAllText": true,
-							"fileExtension": ".txt"
+							"type": "DelimitedTextReadSetting"
 						}
+					},
+					"sink": {
+						"type": "AzureSqlSink"
 					},
 					"enableStaging": false,
 					"translator": {
@@ -33,172 +32,172 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "Match_SK",
-									"type": "Int32"
-								},
-								"sink": {
 									"type": "String",
 									"ordinal": 1
+								},
+								"sink": {
+									"name": "Match_SK",
+									"type": "Int32"
 								}
 							},
 							{
 								"source": {
-									"name": "match_id",
-									"type": "Int32"
-								},
-								"sink": {
 									"type": "String",
 									"ordinal": 2
+								},
+								"sink": {
+									"name": "match_id",
+									"type": "Int32"
 								}
 							},
 							{
 								"source": {
-									"name": "Team1",
-									"type": "String"
-								},
-								"sink": {
 									"type": "String",
 									"ordinal": 3
+								},
+								"sink": {
+									"name": "Team1",
+									"type": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "Team2",
-									"type": "String"
-								},
-								"sink": {
 									"type": "String",
 									"ordinal": 4
+								},
+								"sink": {
+									"name": "Team2",
+									"type": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "match_date",
-									"type": "DateTime"
-								},
-								"sink": {
 									"type": "String",
 									"ordinal": 5
+								},
+								"sink": {
+									"name": "match_date",
+									"type": "DateTime"
 								}
 							},
 							{
 								"source": {
-									"name": "Season_Year",
-									"type": "Int32"
-								},
-								"sink": {
 									"type": "String",
 									"ordinal": 6
+								},
+								"sink": {
+									"name": "Season_Year",
+									"type": "Int32"
 								}
 							},
 							{
 								"source": {
-									"name": "Venue_Name",
-									"type": "String"
-								},
-								"sink": {
 									"type": "String",
 									"ordinal": 7
+								},
+								"sink": {
+									"name": "Venue_Name",
+									"type": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "City_Name",
-									"type": "String"
-								},
-								"sink": {
 									"type": "String",
 									"ordinal": 8
+								},
+								"sink": {
+									"name": "City_Name",
+									"type": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "Country_Name",
-									"type": "String"
-								},
-								"sink": {
 									"type": "String",
 									"ordinal": 9
+								},
+								"sink": {
+									"name": "Country_Name",
+									"type": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "Toss_Winner",
-									"type": "String"
-								},
-								"sink": {
 									"type": "String",
 									"ordinal": 10
+								},
+								"sink": {
+									"name": "Toss_Winner",
+									"type": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "match_winner",
-									"type": "String"
-								},
-								"sink": {
 									"type": "String",
 									"ordinal": 11
+								},
+								"sink": {
+									"name": "match_winner",
+									"type": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "Toss_Name",
-									"type": "String"
-								},
-								"sink": {
 									"type": "String",
 									"ordinal": 12
+								},
+								"sink": {
+									"name": "Toss_Name",
+									"type": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "Win_Type",
-									"type": "String"
-								},
-								"sink": {
 									"type": "String",
 									"ordinal": 13
+								},
+								"sink": {
+									"name": "Win_Type",
+									"type": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "Outcome_Type",
-									"type": "String"
-								},
-								"sink": {
 									"type": "String",
 									"ordinal": 14
+								},
+								"sink": {
+									"name": "Outcome_Type",
+									"type": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "ManOfMach",
-									"type": "String"
-								},
-								"sink": {
 									"type": "String",
 									"ordinal": 15
+								},
+								"sink": {
+									"name": "ManOfMach",
+									"type": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "Win_Margin",
-									"type": "Int32"
-								},
-								"sink": {
 									"type": "Int32",
 									"ordinal": 16
+								},
+								"sink": {
+									"name": "Win_Margin",
+									"type": "Int32"
 								}
 							},
 							{
 								"source": {
-									"name": "Country_id",
-									"type": "Int32"
-								},
-								"sink": {
 									"type": "String",
 									"ordinal": 17
+								},
+								"sink": {
+									"name": "Country_id",
+									"type": "Int32"
 								}
 							}
 						]
@@ -206,13 +205,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "AzureSqlTable1",
+						"referenceName": "DelimitedText1",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedText1",
+						"referenceName": "AzureSqlTable1",
 						"type": "DatasetReference"
 					}
 				]
