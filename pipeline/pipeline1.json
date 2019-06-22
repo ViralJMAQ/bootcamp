@@ -17,21 +17,130 @@
 						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSetting",
-							"recursive": true,
-							"wildcardFileName": "*.*"
+							"recursive": false,
+							"wildcardFileName": "Match.csv",
+							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
 							"type": "DelimitedTextReadSetting"
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink"
+						"type": "AzureSqlSink",
+						"preCopyScript": "Drop table if exists [EMPH2270].[Match];\nCreate table [EMPH2270].[Match]\n(\n    [Match_SK] [smallint] NOT NULL,\n    [match_id] [int] NOT NULL,\n    [Team1] [nvarchar](50) NOT NULL,\n    [Team2] [nvarchar](50) NOT NULL,\n    [match_date] [date] NOT NULL,\n    [Season_Year] [smallint] NOT NULL,\n    [Venue_Name] [nvarchar](100) NOT NULL,\n    [City_Name] [nvarchar](50) NOT NULL,\n    [Country_Name] [nvarchar](50) NOT NULL,\n    [Toss_Winner] [nvarchar](50) NULL,\n    [match_winner] [nvarchar](50) NOT NULL,\n    [Toss_Name] [nvarchar](50) NOT NULL,\n    [Win_Type] [nvarchar](50) NULL,\n    [Outcome_Type] [nvarchar](50) NOT NULL,\n    [ManOfMach] [nvarchar](50) NOT NULL,\n    [Win_Margin] [tinyint] NULL,\n    [Country_id] [tinyint] NOT NULL,\n);"
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"sink": {
+									"name": "Match_SK",
+									"type": "Int16"
+								}
+							},
+							{
+								"sink": {
+									"name": "match_id",
+									"type": "Int32"
+								}
+							},
+							{
+								"sink": {
+									"name": "Team1",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "Team2",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "match_date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"sink": {
+									"name": "Season_Year",
+									"type": "Int16"
+								}
+							},
+							{
+								"sink": {
+									"name": "Venue_Name",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "City_Name",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "Country_Name",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "Toss_Winner",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "match_winner",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "Toss_Name",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "Win_Type",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "Outcome_Type",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "ManOfMach",
+									"type": "String"
+								}
+							},
+							{
+								"sink": {
+									"name": "Win_Margin",
+									"type": "Byte"
+								}
+							},
+							{
+								"sink": {
+									"name": "Country_id",
+									"type": "Byte"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
-						"referenceName": "DelimitedText_Kriti",
+						"referenceName": "Source_Match_blob",
 						"type": "DatasetReference"
 					}
 				],
