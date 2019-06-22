@@ -9,71 +9,71 @@
 		"schema": [
 			{
 				"name": "Match_SK",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "match_id",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "Team1",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "Team2",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "match_date",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "Season_Year",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "Venue_Name",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "City_Name",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "Country_Name",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "Toss_Winner",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "match_winner",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "Toss_Name",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "Win_Type",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "Outcome_Type",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "ManOfMach",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "Win_Margin",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
 				"name": "Country_id",
-				"type": "varchar"
+				"type": "nvarchar"
 			}
 		],
 		"typeProperties": {
