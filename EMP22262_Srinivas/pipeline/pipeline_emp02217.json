@@ -17,7 +17,8 @@
 						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSetting",
-							"recursive": true
+							"recursive": false,
+							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
 							"type": "DelimitedTextReadSetting"
@@ -30,13 +31,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "Match_emp02217",
+						"referenceName": "MatchBrijesh",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "AzureSqlTable_2217",
+						"referenceName": "AzureSqlTableBrijesh",
 						"type": "DatasetReference"
 					}
 				]
@@ -59,11 +60,8 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"typeProperties": {
-					"storedProcedureName": "[EMP02217].[usp_top5matches]"
-				},
 				"linkedServiceName": {
-					"referenceName": "AzureSqlDatabase_EMPH02217",
+					"referenceName": "AzureSqlDatabaseBrijesh",
 					"type": "LinkedServiceReference"
 				}
 			}
