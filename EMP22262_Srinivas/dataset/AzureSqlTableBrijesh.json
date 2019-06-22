@@ -81,7 +81,7 @@
 			}
 		],
 		"typeProperties": {
-			"tableName": "[EMP01137].[Match]"
+			"tableName": "[EMPH2286].[Match]"
 		}
 	}
 }
