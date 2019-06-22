@@ -36,7 +36,7 @@
 							{
 								"source": {
 									"name": "Match_SK",
-									"type": "String"
+									"type": "Int32"
 								},
 								"sink": {
 									"name": "Match_SK",
@@ -46,7 +46,7 @@
 							{
 								"source": {
 									"name": "match_id",
-									"type": "String"
+									"type": "Int32"
 								},
 								"sink": {
 									"name": "match_id",
