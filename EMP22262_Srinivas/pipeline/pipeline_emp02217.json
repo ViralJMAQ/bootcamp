@@ -28,7 +28,8 @@
 						"type": "AzureSqlSink",
 						"preCopyScript": "DROP TABLE IF EXISTS [EMPH2286].[Match]\n\tCREATE TABLE [EMPH2286].[Match](\n\t\t[Match_SK] [varchar](50) NULL,\n\t\t[match_id] [varchar](50) NULL,\n\t\t[Team1] [varchar](50) NULL,\n\t\t[Team2] [varchar](50) NULL,\n\t\t[match_date] [varchar](50) NULL,\n\t\t[Season_Year] [varchar](50) NULL,\n\t\t[Venue_Name] [varchar](50) NULL,\n\t\t[City_Name] [varchar](50) NULL,\n\t\t[Country_Name] [varchar](50) NULL,\n\t\t[Toss_Winner] [varchar](50) NULL,\n\t\t[match_winner] [varchar](50) NULL,\n\t\t[Toss_Name] [varchar](50) NULL,\n\t\t[Win_Type] [varchar](50) NULL,\n\t\t[Outcome_Type] [varchar](50) NULL,\n\t\t[ManOfMach] [varchar](50) NULL,\n\t\t[Win_Margin] [varchar](50) NULL,\n\t\t[Country_id] [varchar](50) NULL\n\t) ON [PRIMARY]"
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"enableSkipIncompatibleRow": true
 				},
 				"inputs": [
 					{
@@ -60,6 +61,9 @@
 					"retryIntervalInSeconds": 30,
 					"secureOutput": false,
 					"secureInput": false
+				},
+				"typeProperties": {
+					"storedProcedureName": "[EMPH2286].[fetchTop5Matches]"
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureSqlDatabaseBrijesh",
