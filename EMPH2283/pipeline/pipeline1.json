@@ -82,7 +82,7 @@
 							},
 							{
 								"source": {
-									"type": "Int16",
+									"type": "Int64",
 									"ordinal": 6
 								},
 								"sink": {
