@@ -37,7 +37,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "AzureSqlTable1",
+						"referenceName": "DST_AzureSQL_Match_2258",
 						"type": "DatasetReference"
 					}
 				]

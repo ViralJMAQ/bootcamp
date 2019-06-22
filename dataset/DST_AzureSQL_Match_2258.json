@@ -1,5 +1,5 @@
 {
-	"name": "AzureSqlTable1",
+	"name": "DST_AzureSQL_Match_2258",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "EMPH2258Milind",
