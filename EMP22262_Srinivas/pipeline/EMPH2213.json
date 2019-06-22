@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy Data1",
+				"name": "Copy Data2",
 				"type": "Copy",
 				"policy": {
 					"timeout": "7.00:00:00",
@@ -26,182 +26,7 @@
 					"sink": {
 						"type": "AzureSqlSink"
 					},
-					"enableStaging": false,
-					"translator": {
-						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"name": "Match_SK",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Match_SK",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "match_id",
-									"type": "String"
-								},
-								"sink": {
-									"name": "match_id",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "Team1",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Team1",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "Team2",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Team2",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "match_date",
-									"type": "String"
-								},
-								"sink": {
-									"name": "match_date",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "Season_Year",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Season_Year",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "Venue_Name",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Venue_Name",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "City_Name",
-									"type": "String"
-								},
-								"sink": {
-									"name": "City_Name",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "Country_Name",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Country_Name",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "Toss_Winner",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Toss_Winner",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "match_winner",
-									"type": "String"
-								},
-								"sink": {
-									"name": "match_winner",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "Toss_Name",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Toss_Name",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "Win_Type",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Win_Type",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "Outcome_Type",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Outcome_Type",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "ManOfMach",
-									"type": "String"
-								},
-								"sink": {
-									"name": "ManOfMach",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "Win_Margin",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Win_Margin",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "Country_id",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Country_id",
-									"type": "String"
-								}
-							}
-						]
-					}
+					"enableStaging": false
 				},
 				"inputs": [
 					{
@@ -217,11 +42,11 @@
 				]
 			},
 			{
-				"name": "Stored Procedure1",
+				"name": "Stored Procedure2",
 				"type": "SqlServerStoredProcedure",
 				"dependsOn": [
 					{
-						"activity": "Copy Data1",
+						"activity": "Copy Data2",
 						"dependencyConditions": [
 							"Succeeded"
 						]
