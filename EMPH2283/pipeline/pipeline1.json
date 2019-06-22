@@ -35,7 +35,7 @@
 							{
 								"source": {
 									"name": "Match_SK",
-									"type": "Int32"
+									"type": "Int16"
 								},
 								"sink": {
 									"name": "Match_SK",
@@ -85,7 +85,7 @@
 							{
 								"source": {
 									"name": "Season_Year",
-									"type": "Int32"
+									"type": "Int16"
 								},
 								"sink": {
 									"name": "Season_Year",
