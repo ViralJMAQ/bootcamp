@@ -24,8 +24,7 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink",
-						"sqlWriterStoredProcedureName": "[EMP01143].[usp_top5matches]"
+						"type": "AzureSqlSink"
 					},
 					"enableStaging": false
 				},
