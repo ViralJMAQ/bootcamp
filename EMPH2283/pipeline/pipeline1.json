@@ -31,10 +31,6 @@
 						"type": "TabularTranslator",
 						"mappings": [
 							{
-								"source": {
-									"type": "String",
-									"ordinal": 1
-								},
 								"sink": {
 									"name": "Match_SK",
 									"type": "Int16"
@@ -43,7 +39,7 @@
 							{
 								"source": {
 									"type": "String",
-									"ordinal": 2
+									"ordinal": 1
 								},
 								"sink": {
 									"name": "match_id",
@@ -53,7 +49,7 @@
 							{
 								"source": {
 									"type": "String",
-									"ordinal": 3
+									"ordinal": 2
 								},
 								"sink": {
 									"name": "Team1",
@@ -63,7 +59,7 @@
 							{
 								"source": {
 									"type": "String",
-									"ordinal": 4
+									"ordinal": 3
 								},
 								"sink": {
 									"name": "Team2",
@@ -73,7 +69,7 @@
 							{
 								"source": {
 									"type": "String",
-									"ordinal": 5
+									"ordinal": 4
 								},
 								"sink": {
 									"name": "match_date",
@@ -83,7 +79,7 @@
 							{
 								"source": {
 									"type": "String",
-									"ordinal": 6
+									"ordinal": 5
 								},
 								"sink": {
 									"name": "Season_Year",
@@ -93,7 +89,7 @@
 							{
 								"source": {
 									"type": "String",
-									"ordinal": 7
+									"ordinal": 6
 								},
 								"sink": {
 									"name": "Venue_Name",
@@ -103,7 +99,7 @@
 							{
 								"source": {
 									"type": "String",
-									"ordinal": 8
+									"ordinal": 7
 								},
 								"sink": {
 									"name": "City_Name",
@@ -113,7 +109,7 @@
 							{
 								"source": {
 									"type": "String",
-									"ordinal": 9
+									"ordinal": 8
 								},
 								"sink": {
 									"name": "Country_Name",
@@ -123,7 +119,7 @@
 							{
 								"source": {
 									"type": "String",
-									"ordinal": 10
+									"ordinal": 9
 								},
 								"sink": {
 									"name": "Toss_Winner",
@@ -133,7 +129,7 @@
 							{
 								"source": {
 									"type": "String",
-									"ordinal": 11
+									"ordinal": 10
 								},
 								"sink": {
 									"name": "match_winner",
@@ -143,7 +139,7 @@
 							{
 								"source": {
 									"type": "String",
-									"ordinal": 12
+									"ordinal": 11
 								},
 								"sink": {
 									"name": "Toss_Name",
@@ -153,7 +149,7 @@
 							{
 								"source": {
 									"type": "String",
-									"ordinal": 13
+									"ordinal": 12
 								},
 								"sink": {
 									"name": "Win_Type",
@@ -163,7 +159,7 @@
 							{
 								"source": {
 									"type": "String",
-									"ordinal": 14
+									"ordinal": 13
 								},
 								"sink": {
 									"name": "Outcome_Type",
@@ -173,7 +169,7 @@
 							{
 								"source": {
 									"type": "String",
-									"ordinal": 15
+									"ordinal": 14
 								},
 								"sink": {
 									"name": "ManOfMach",
@@ -183,7 +179,7 @@
 							{
 								"source": {
 									"type": "String",
-									"ordinal": 16
+									"ordinal": 15
 								},
 								"sink": {
 									"name": "Win_Margin",
@@ -193,7 +189,7 @@
 							{
 								"source": {
 									"type": "String",
-									"ordinal": 17
+									"ordinal": 16
 								},
 								"sink": {
 									"name": "Country_id",
