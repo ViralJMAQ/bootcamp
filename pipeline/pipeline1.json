@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "EMP01157_CopyData",
+				"name": "Copy Data1",
 				"type": "Copy",
 				"policy": {
 					"timeout": "7.00:00:00",
@@ -24,8 +24,7 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink",
-						"sqlWriterStoredProcedureName": "[EMP01157].[uspCopyMatchData]"
+						"type": "AzureSqlSink"
 					},
 					"enableStaging": false
 				},
@@ -41,6 +40,24 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Stored Procedure1",
+				"type": "SqlServerStoredProcedure",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"storedProcedureName": "[EMP01157].[uspCopyMatchData]"
+				},
+				"linkedServiceName": {
+					"referenceName": "EMP01157_AzureSqlDatabase",
+					"type": "LinkedServiceReference"
+				}
 			}
 		]
 	}
