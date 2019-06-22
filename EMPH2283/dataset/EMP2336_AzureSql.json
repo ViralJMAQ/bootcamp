@@ -6,6 +6,9 @@
 			"type": "LinkedServiceReference"
 		},
 		"type": "AzureSqlTable",
-		"schema": []
+		"schema": [],
+		"typeProperties": {
+			"tableName": "[EMP2336].[EMP2336_Match]"
+		}
 	}
 }
