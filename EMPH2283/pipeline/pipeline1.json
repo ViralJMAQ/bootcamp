@@ -45,7 +45,7 @@
 							{
 								"source": {
 									"name": "match_id",
-									"type": "Int64"
+									"type": "Int32"
 								},
 								"sink": {
 									"name": "match_id",
@@ -185,7 +185,7 @@
 							{
 								"source": {
 									"name": "Win_Margin",
-									"type": "Int16"
+									"type": "Byte"
 								},
 								"sink": {
 									"name": "Win_Margin",
@@ -195,7 +195,7 @@
 							{
 								"source": {
 									"name": "Country_id",
-									"type": "Int16"
+									"type": "Byte"
 								},
 								"sink": {
 									"name": "Country_id",
