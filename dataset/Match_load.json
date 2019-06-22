@@ -1,0 +1,11 @@
+{
+	"name": "Match_load",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EMP01137_SQL",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
