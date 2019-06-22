@@ -2,7 +2,7 @@
 	"name": "AzureSqlTable_2298",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureSqlDatabase_EMPH02217",
+			"referenceName": "ADW_maqbootcamp",
 			"type": "LinkedServiceReference"
 		},
 		"type": "AzureSqlTable",
@@ -75,10 +75,7 @@
 				"name": "Prop_16",
 				"type": "varchar"
 			}
-		],
-		"typeProperties": {
-			"tableName": "[EMP02217].[Match]"
-		}
+		]
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
 }
