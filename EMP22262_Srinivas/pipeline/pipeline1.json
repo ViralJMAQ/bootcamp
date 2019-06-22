@@ -25,7 +25,8 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink"
+						"type": "AzureSqlSink",
+						"preCopyScript": "CREATE TABLE [EMPH2335].[Match](\n\t[Match_SK] [float] NULL,\n\t[match_id] [float] NULL,\n\t[Team1] [nvarchar](255) NULL,\n\t[Team2] [nvarchar](255) NULL,\n\t[match_date] [nvarchar](255) NULL,\n\t[Season_Year] [float] NULL,\n\t[Venue_Name] [nvarchar](255) NULL,\n\t[City_Name] [nvarchar](255) NULL,\n\t[Country_Name] [nvarchar](255) NULL,\n\t[Toss_Winner] [nvarchar](255) NULL,\n\t[match_winner] [nvarchar](255) NULL,\n\t[Toss_Name] [nvarchar](255) NULL,\n\t[Win_Type] [nvarchar](255) NULL,\n\t[Outcome_Type] [nvarchar](255) NULL,\n\t[ManOfMach] [nvarchar](255) NULL,\n\t[Win_Margin] [float] NULL,\n\t[Country_id] [float] NULL\n) ON [PRIMARY]"
 					},
 					"enableStaging": false
 				},
@@ -41,6 +42,32 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Stored Procedure1",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "Copy Data1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"storedProcedureName": "[EMPH2335].[usp_get5Detail]"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureSqlDatabase1",
+					"type": "LinkedServiceReference"
+				}
 			}
 		]
 	}
