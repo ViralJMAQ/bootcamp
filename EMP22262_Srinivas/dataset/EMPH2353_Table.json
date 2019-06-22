@@ -1,0 +1,11 @@
+{
+	"name": "EMPH2353_Table",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EMPH2353_Database",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
