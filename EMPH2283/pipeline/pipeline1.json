@@ -185,7 +185,7 @@
 							{
 								"source": {
 									"name": "Win_Margin",
-									"type": "Byte"
+									"type": "Int32"
 								},
 								"sink": {
 									"name": "Win_Margin",
@@ -195,7 +195,7 @@
 							{
 								"source": {
 									"name": "Country_id",
-									"type": "Byte"
+									"type": "Int32"
 								},
 								"sink": {
 									"name": "Country_id",
