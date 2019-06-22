@@ -1,0 +1,48 @@
+{
+	"name": "PipelinePiyushT",
+	"properties": {
+		"description": "Copy activity to copy data from BLOB to Azure SQL Database",
+		"activities": [
+			{
+				"name": "Copy Data1",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSetting",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSetting"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"sqlWriterStoredProcedureName": "[EMP01140].[usp_Top5Matches]"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "Match",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSqlTablePiyushT",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	}
+}
