@@ -3,20 +3,6 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy Data2",
-				"type": "Copy",
-				"policy": {
-					"timeout": "7.00:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"typeProperties": {
-					"enableStaging": false
-				}
-			},
-			{
 				"name": "Copy1",
 				"type": "Copy",
 				"policy": {
@@ -38,30 +24,216 @@
 						}
 					},
 					"sink": {
-						"type": "DelimitedTextSink",
-						"storeSettings": {
-							"type": "AzureBlobStorageWriteSetting"
-						},
-						"formatSettings": {
-							"type": "DelimitedTextWriteSetting",
-							"quoteAllText": true,
-							"fileExtension": ".txt"
-						}
+						"type": "AzureSqlSink"
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Match_SK",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "Match_SK",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "match_id",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "match_id",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Team1",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Team1",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Team2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Team2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "match_date",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "match_date",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Season_Year",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "Season_Year",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Venue_Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Venue_Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "City_Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "City_Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Country_Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Country_Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Toss_Winner",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Toss_Winner",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "match_winner",
+									"type": "String"
+								},
+								"sink": {
+									"name": "match_winner",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Toss_Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Toss_Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Win_Type",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Win_Type",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Outcome_Type",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Outcome_Type",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ManOfMach",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ManOfMach",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Win_Margin",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Win_Margin",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Country_id",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "Country_id",
+									"type": "Int32"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
-						"referenceName": "Match_rahul",
+						"referenceName": "DelimitedText1",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "Match_rahul",
+						"referenceName": "Match_Dataset",
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Stored Procedure1",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "Copy1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				}
 			}
 		]
 	}
