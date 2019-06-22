@@ -1,0 +1,14 @@
+{
+	"name": "AzureAdit",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EMPH2281AZR",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "[EMPH2281].[Match]"
+		}
+	}
+}
