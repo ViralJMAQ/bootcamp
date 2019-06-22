@@ -17,8 +17,9 @@
 						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSetting",
-							"recursive": true,
-							"wildcardFileName": "*.*"
+							"recursive": false,
+							"wildcardFileName": "Match.csv",
+							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
 							"type": "DelimitedTextReadSetting"
@@ -39,7 +40,7 @@
 								},
 								"sink": {
 									"name": "Match_SK",
-									"type": "Double"
+									"type": "String"
 								}
 							},
 							{
@@ -49,7 +50,7 @@
 								},
 								"sink": {
 									"name": "match_id",
-									"type": "Double"
+									"type": "String"
 								}
 							},
 							{
@@ -89,7 +90,7 @@
 								},
 								"sink": {
 									"name": "Season_Year",
-									"type": "Double"
+									"type": "String"
 								}
 							},
 							{
@@ -184,12 +185,12 @@
 							},
 							{
 								"source": {
-									"type": "Int64",
+									"type": "String",
 									"ordinal": 16
 								},
 								"sink": {
 									"name": "Win_Margin",
-									"type": "Double"
+									"type": "String"
 								}
 							},
 							{
@@ -199,7 +200,7 @@
 								},
 								"sink": {
 									"name": "Country_id",
-									"type": "Double"
+									"type": "String"
 								}
 							}
 						]
