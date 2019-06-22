@@ -42,7 +42,7 @@
 				]
 			},
 			{
-				"name": "Stored Procedure1",
+				"name": "Stored Procedure",
 				"type": "SqlServerStoredProcedure",
 				"dependsOn": [
 					{
@@ -60,10 +60,10 @@
 					"secureInput": false
 				},
 				"typeProperties": {
-					"storedProcedureName": "[EMP02217].[usp_top5matches]"
+					"storedProcedureName": "[EMPH2302].[usp_top5]"
 				},
 				"linkedServiceName": {
-					"referenceName": "AzureSqlDatabase_EMPH02217",
+					"referenceName": "EMPH2302_Azure_SQL_Database",
 					"type": "LinkedServiceReference"
 				}
 			}
