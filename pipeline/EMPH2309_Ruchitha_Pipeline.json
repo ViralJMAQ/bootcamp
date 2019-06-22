@@ -23,9 +23,26 @@
 							"type": "DelimitedTextReadSetting"
 						}
 					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSetting"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSetting",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
 					"enableStaging": false
 				},
 				"inputs": [
+					{
+						"referenceName": "Match_EMPH2309",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
 					{
 						"referenceName": "Match_EMPH2309",
 						"type": "DatasetReference"
@@ -55,9 +72,18 @@
 						"type": "AzureSqlSource",
 						"sqlReaderStoredProcedureName": "[EMPH2309].[Top5Matches]"
 					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
 					"enableStaging": false
 				},
 				"inputs": [
+					{
+						"referenceName": "EMPH_2309AzureSqlTable2",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
 					{
 						"referenceName": "EMPH_2309AzureSqlTable2",
 						"type": "DatasetReference"
