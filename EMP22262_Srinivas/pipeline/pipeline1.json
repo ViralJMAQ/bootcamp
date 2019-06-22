@@ -233,6 +233,13 @@
 					"retryIntervalInSeconds": 30,
 					"secureOutput": false,
 					"secureInput": false
+				},
+				"typeProperties": {
+					"storedProcedureName": "[EMPH2305].[usp_top5wwin]"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureSqlDatabase_rahulnew",
+					"type": "LinkedServiceReference"
 				}
 			}
 		]
