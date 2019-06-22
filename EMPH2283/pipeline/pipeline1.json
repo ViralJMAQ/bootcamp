@@ -26,7 +26,7 @@
 					},
 					"sink": {
 						"type": "AzureSqlSink",
-						"preCopyScript": "drop table if exists [EMPH2273].[Match]\nCreate table [EMPH2273].[Matche]\n(\n\t[Match_SK] [smallint] NOT NULL,\n\t[match_id] [int] NOT NULL,\n\t[Team1] [nvarchar](50) NOT NULL,\n\t[Team2] [nvarchar](50) NOT NULL,\n\t[match_date] [date] NOT NULL,\n\t[Season_Year] [smallint] NOT NULL,\n\t[Venue_Name] [nvarchar](100) NOT NULL,\n\t[City_Name] [nvarchar](50) NOT NULL,\n\t[Country_Name] [nvarchar](50) NOT NULL,\n\t[Toss_Winner] [nvarchar](50) NULL,\n\t[match_winner] [nvarchar](50) NOT NULL,\n\t[Toss_Name] [nvarchar](50) NOT NULL,\n\t[Win_Type] [nvarchar](50) NULL,\n\t[Outcome_Type] [nvarchar](50) NOT NULL,\n\t[ManOfMach] [nvarchar](50) NOT NULL,\n\t[Win_Margin] [tinyint] NULL,\n\t[Country_id] [tinyint] NOT NULL,\n)"
+						"preCopyScript": "truncate table  [EMPH2273].[Match]\n"
 					},
 					"enableStaging": false,
 					"translator": {
