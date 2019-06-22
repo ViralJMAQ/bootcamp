@@ -73,8 +73,7 @@
 			},
 			{
 				"name": "Win_Margin",
-				"type": "int",
-				"precision": 10
+				"type": "nvarchar"
 			},
 			{
 				"name": "Country_id",
