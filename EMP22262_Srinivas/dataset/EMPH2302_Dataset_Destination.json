@@ -2,7 +2,7 @@
 	"name": "EMPH2302_Dataset_Destination",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "bootcamp",
+			"referenceName": "EMPH2302_Azure_SQL_Database",
 			"type": "LinkedServiceReference"
 		},
 		"type": "AzureSqlTable",
